@@ -13,10 +13,11 @@ Welcome to the Cycle Rental Systems web application! This application allows use
 - [ ] Implement a payment gateway for rental transactions
 - [ ] Add a rating and feedback system for users to provide reviews
 - [ ] Create a basic UI layout for the application
+- [ ] Set up project structure and dependencies
 
 ## Finished Tasks
 
-- [ ] Set up project structure and dependencies
+- None
 
 
 
