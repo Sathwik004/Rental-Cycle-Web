@@ -12,11 +12,12 @@ Welcome to the Cycle Rental Systems web application! This application allows use
 - [ ] Design an admin panel for managing bicycles and user accounts
 - [ ] Implement a payment gateway for rental transactions
 - [ ] Add a rating and feedback system for users to provide reviews
+- [ ] Create a basic UI layout for the application
 
 ## Finished Tasks
 
 - [ ] Set up project structure and dependencies
-- [ ] Create a basic UI layout for the application
+
 
 
 Feel free to add more tasks to the TO DO list as you progress with your project. Happy coding!
