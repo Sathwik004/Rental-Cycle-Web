@@ -1,0 +1,22 @@
+.imgback{
+    background-color: rgb(107, 191, 89);
+    margin-right: 0%;
+    width: 50%;
+}
+.img{
+    width:400px;
+    height: 400px;
+    margin-top: 25%;
+    margin-left: 20%;
+    margin-bottom: 70%;
+    background-color: rgb(107, 191, 89, 0);
+}
+.title{
+    font-weight: 200px;
+    color: white;
+    font-family: 'Cooper Black';
+    padding-left: 40%;
+}
+.wholething{
+    display: flex;
+}
