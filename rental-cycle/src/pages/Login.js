@@ -1,7 +1,18 @@
 import styles from '../components/Login.module.css';
 import React from 'react';
-import img from '../assets/loginpageimg.gif'
+import img from '../assets/loginpageimg.gif';
+
+
 function Login() {
+
+    function signIn(){
+        console.log("send auth msg");
+    } 
+
+    function cancel(){ 
+        window.location.href = '/';
+    }
+
     return(
         <div className={styles.wholething}>
 
@@ -15,8 +26,8 @@ function Login() {
                 <input type='text' placeholder='Password' className={styles.info}></input>
                 <div className={styles.password}>Forgot Password?</div>
                 <p className={styles.boxes}>
-                    <button className={styles.button1}>Sign In</button>
-                    <button className={styles.button2}>Cancel</button>
+                    <button className={styles.button1} onClick={signIn}>Sign In</button>
+                    <button className={styles.button2} onClick={cancel}>Cancel</button>
                 </p>
 
             </div>
