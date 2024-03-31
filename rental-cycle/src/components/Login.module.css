@@ -12,11 +12,59 @@
     background-color: rgb(107, 191, 89, 0);
 }
 .title{
-    font-weight: 200px;
     color: white;
     font-family: 'Cooper Black';
-    padding-left: 40%;
+    padding-left: 30%;
+    font-size: 60px;
+    font-weight: 300;
+    margin-top: 20%;
 }
 .wholething{
     display: flex;
 }
+.info{
+    padding-left: 5%;
+    background-color:black;
+    color: white;
+    border-radius: 10px;
+    height: 68px;
+    border-color: white;
+    border-width: 2px;
+    width:300px;
+    margin-top: 0%;
+    margin-left: 20%;
+    margin-bottom: 10px;
+    align-items: center;
+    font-size: 18px;
+}
+.password{
+    color: white;
+    margin-left: 21%;
+    padding-bottom: 40px;
+}
+ .boxes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+
+ }
+ .button1{
+    height: 68px;
+    width: 337px;
+    color: white;
+    background-color: #08A045;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+ }
+ .button2{
+    height: 68px;
+    width: 337px;
+    color: white;
+    background-color: #263238;
+    border-radius: 10px;
+    font-size: 24px;
+
+    
+ }
