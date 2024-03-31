@@ -38,6 +38,7 @@
     justify-content: space-between;
     padding-right: 30px;
     font-weight: 600px;
+    font-family: 'lucida fax';
 
 }
 .link a{
@@ -58,6 +59,13 @@
     background-color: black;
 }
 .link1{
+    background-color: black;
+    width: 113px;
+    height: 40px;
+    font-family: 'lucida fax';
+    font-size: 16px;
+    border-color: transparent;
+    font-weight: 900;
     color: green;
 }
 
@@ -100,6 +108,8 @@
     color: white;
     border-width: 0px;
     font-size: 16px;
-    font-weight: 600px;
+    font-weight: 900;
     font-family: 'lucida fax';
+    padding-right: 14px;
 }
+

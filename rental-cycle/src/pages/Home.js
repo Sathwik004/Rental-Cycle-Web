@@ -1,7 +1,8 @@
 import styles from '../components/Homepage.module.css';
 import React from 'react';
 import img from '../assets/logout.jpg';
-import img1 from '../assets/homepageimg.jpg'
+import img1 from '../assets/homepageimg.jpg';
+
 
 function Home() {
     return(
