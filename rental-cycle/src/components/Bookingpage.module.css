@@ -1,0 +1,78 @@
+.title{
+    background: linear-gradient(to right, #109716, grey);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'cooper black';
+    margin: 120px 10px 10px 500px;
+}
+
+.gif{
+    width: 300px;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.midpart{
+    display: flex;
+}
+.from{
+    color:white;
+    position: absolute;
+    padding-left: 25px;
+    padding-top: 4px;
+    font-family: 'calibri';
+    font-size: 30px;
+
+}
+.from1{
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 9px;
+    width: 60px;
+    margin-left: 13px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align:left;
+    margin-top:6px;
+}
+.input1{
+    position: relative;
+    margin-left: 50%;
+    margin-top: 20%;
+}
+.box1{
+    width: 250px;
+    height: auto
+}
+
+
+.to{
+    color:white;
+    position: absolute;
+    padding-left: 25px;
+    padding-top: 4px;
+    font-family: 'calibri';
+    font-size: 30px;
+
+}
+.to1{
+    position: absolute;
+    padding-left: 30px;
+    padding-top: 9px;
+    width: 60px;
+    margin-left: 13px;
+    background-color: transparent;
+    border-color: transparent;
+    text-align:left;
+    margin-top:6px;
+}
+.input2{
+    position: relative;
+    margin-left: 50%;
+    margin-top: 20%;
+}
+.box2{
+    width: 250px;
+    height: auto
+}

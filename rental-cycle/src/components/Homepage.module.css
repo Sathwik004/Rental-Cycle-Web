@@ -76,7 +76,9 @@
     font-size: 24px;
     background-color: #08A045;
     color: white;
-    border-radius: 20%;
+    border-radius: 10px;
+    border-color: black;
+    border-style:groove;
 }
 .whole{
     width: 50%;
