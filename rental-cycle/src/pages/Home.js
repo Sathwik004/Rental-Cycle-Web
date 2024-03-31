@@ -10,7 +10,8 @@ function Home() {
             <div className={styles.title}>SALAD</div>
             <ul className={styles.unorderlist}>
                 <li className={styles.link}>Profile</li>
-                <li className={styles.link}><img src={img} className={styles.imgicon}></img>Logout</li>
+                <img src={img} className={styles.imgicon}></img>
+                <li className={styles.link}>Logout</li>
             </ul>
         </nav>
         <div className={styles.paras}>

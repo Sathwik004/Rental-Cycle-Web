@@ -37,7 +37,7 @@
     font-size: 16px;
     justify-content: space-between;
     padding-right: 30px;
-    font-weight: 600;
+    font-weight: 600px;
 
 }
 .link a{
@@ -94,4 +94,12 @@
 .midarea{
     display: flex;
     align-items: center;
+}
+.button1{
+    background-color: black;
+    color: white;
+    border-width: 0px;
+    font-size: 16px;
+    font-weight: 600px;
+    font-family: 'lucida fax';
 }
