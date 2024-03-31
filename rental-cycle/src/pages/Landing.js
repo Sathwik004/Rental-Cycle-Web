@@ -10,7 +10,9 @@ function Landing() {
                 <div className={styles.navdiv}>
                     <div className={styles.logo}><a href=" ">SALAD</a></div>
                     <ul>
-                        <li className={styles.link}><a href=" ">About Us</a>   </li>
+                        <li className={styles.link}>
+                            <button className={styles.button1}>About Us</button>
+                        </li>
                         <li className={styles.link}><a href=" ">Login</a>   </li>
                         <li className={styles.link}><a href=" "><div className={styles.link1}>Get Started</div></a>  </li>
                     </ul>

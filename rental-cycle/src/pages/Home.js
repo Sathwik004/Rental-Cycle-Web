@@ -3,7 +3,7 @@ import React from 'react';
 import img from '../assets/logout.jpg';
 import img1 from '../assets/homepageimg.jpg'
 
-function Homepage() {
+function Home() {
     return(
         <>
         <nav className={styles.navdiv}>
@@ -29,4 +29,4 @@ function Homepage() {
         </>
     );
 }
-export default Homepage
+export default Home;
