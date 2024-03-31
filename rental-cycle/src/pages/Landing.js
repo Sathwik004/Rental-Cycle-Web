@@ -1,7 +1,6 @@
 import styles from '../components/Landing.module.css';
 import React from 'react';
 import gif from '../assets/Ride a bicycle.gif';
-import '../pages/Login'
 
 
 function Landing() {
@@ -14,7 +13,7 @@ function Landing() {
                         <li className={styles.link}>
                             <button className={styles.button1}>About Us</button>
                         </li>
-                        <li className={styles.link}><a href="/Login.js">Login</a>   </li>
+                        <li className={styles.link}><a href="">Login</a>   </li>
                         <li className={styles.link}><a href=" "><button className={styles.link1}>Get Started</button></a>  </li>
                     </ul>
                 </div>

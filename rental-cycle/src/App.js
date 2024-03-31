@@ -6,7 +6,10 @@ import Booking from './pages/Bookingpage';
 function App() {
   return (
     <div>
-      <Landing></Landing>      
+      <Landing />
+      <Home />
+      <Login />
+      <Booking />
     </div>
   );
 }

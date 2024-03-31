@@ -15,11 +15,11 @@ function Login() {
 
     return(
         <div className={styles.wholething}>
-
-            <div className={styles.imgback}>
-                <img src={img} className={styles.img}></img>
+            <div className={styles.leftside}>
+                <div className={styles.imgback}>
+                    <img src={img} className={styles.img}></img>
+                </div>
             </div>
-
             <div className={styles.rightside}>
                 <h1 className={styles.title}>LOGIN</h1>
                 <input type='text' placeholder='Registration' className={styles.info}></input>

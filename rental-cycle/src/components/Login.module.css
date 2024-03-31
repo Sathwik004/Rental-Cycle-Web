@@ -1,7 +1,8 @@
 .imgback{
     background-color: rgb(107, 191, 89);
-    margin-right: 0%;
-    width: 50%;
+    margin-left: 0%;
+    width: 700px;
+    padding-left: 0px;
 }
 .img{
     width:400px;
@@ -21,6 +22,9 @@
 }
 .wholething{
     display: flex;
+    justify-content: space-around;
+    padding-bottom: 100px;
+
 }
 .info{
     padding-left: 5%;
@@ -68,5 +72,8 @@
     font-size: 24px;
     font-family: 'sans-serif';
 
+    
+ }
+ .rightside{
     
  }
