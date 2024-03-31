@@ -14,9 +14,6 @@
     font-size: 50px;
     font-weight: 900;
     padding-left: 20px;
-    padding-right: 50px;
-    padding-top: 0%;
-    padding-bottom: 0px;
     margin-top: 0px;
 }
 
@@ -72,7 +69,7 @@
 }
 
 .wordcolor{
-    color: lawngreen;
+    color: #6BBF59;
 }
 
 .para2{
@@ -94,4 +91,21 @@
 .midarea{
     display: flex;
     align-items: center;
+}
+
+.button1 {
+    background-color: black;
+    color: white;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+.button2 {
+    background-color: black;
+    color: #3ED14D;
+    border: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
 }
