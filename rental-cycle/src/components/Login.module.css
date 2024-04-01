@@ -1,33 +1,49 @@
 .imgback{
     background-color: rgb(107, 191, 89);
+<<<<<<< HEAD
     margin-left: 0%;
     width: 700px;
     padding-left: 0px;
+=======
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+>>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10
 }
 .img{
-    width:400px;
-    height: 400px;
-    margin-top: 25%;
-    margin-left: 20%;
-    margin-bottom: 70%;
     background-color: rgb(107, 191, 89, 0);
+    width: 40vw;
+    height: 40vw;
 }
 .title{
     color: white;
     font-family: 'Cooper Black';
-    padding-left: 30%;
     font-size: 60px;
     font-weight: 300;
-    margin-top: 20%;
+    padding: 20px;
 }
 .wholething{
     display: flex;
+<<<<<<< HEAD
     justify-content: space-around;
     padding-bottom: 100px;
 
+=======
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.right{
+    margin: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+>>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10
 }
 .info{
-    padding-left: 5%;
     background-color:black;
     color: white;
     border-radius: 10px;
@@ -35,8 +51,6 @@
     border-color: white;
     border-width: 2px;
     width:300px;
-    margin-top: 0%;
-    margin-left: 20%;
     margin-bottom: 10px;
     align-items: center;
     font-size: 18px;
@@ -59,8 +73,12 @@
     background-color: #08A045;
     border-radius: 10px;
     font-size: 24px;
+<<<<<<< HEAD
     margin-bottom: 10px;
     font-family: 'sans-serif';
+=======
+    margin: 10px;
+>>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10
     
  }
  .button2{
@@ -70,10 +88,14 @@
     background-color: #263238;
     border-radius: 10px;
     font-size: 24px;
+<<<<<<< HEAD
     font-family: 'sans-serif';
 
     
  }
  .rightside{
     
+=======
+    margin: 10px;
+>>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10
  }
