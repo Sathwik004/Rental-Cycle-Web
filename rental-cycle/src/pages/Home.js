@@ -7,7 +7,7 @@ function Home() {
     return(
         <>
         <nav className={styles.navdiv}>
-            <div className={styles.title}>SALAD</div>
+            <div className={styles.title}>CycleHub</div>
             <ul className={styles.unorderlist}>
                 <li className={styles.link}>Profile</li>
                 <img src={img} className={styles.imgicon}></img>
@@ -19,8 +19,10 @@ function Home() {
             <div className={styles.whole}>
                 <p className={styles.para1}><span className={styles.wordcolor}>Skip</span> the hassle of owning and maintaining a bike.  <span className={styles.wordcolor}>Rent one </span>whenever you need it!</p>
                 <p className={styles.para2}>Book Your Cycle Now</p>
-                <p className={styles.para3}><button className={styles.button}>Book now</button></p>
             </div>
+        </div>
+        <div className={styles.availability}>
+
         </div>
         <div className={styles.footer}>
             <div>About us</div>

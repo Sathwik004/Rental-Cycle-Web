@@ -85,6 +85,10 @@
 .whole{
     width: 50%;
 }
+
+.avalability{
+    margin: 100px 10px 100px 10px;
+}
 .footer{
     color: white;
     display: flex;
