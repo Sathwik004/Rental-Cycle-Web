@@ -1,16 +1,26 @@
 import styles from '../components/Homepage.module.css';
-import React from 'react';
+import React, { useState } from 'react';
 import img from '../assets/logout.jpg';
 import img1 from '../assets/homepageimg.jpg'
+import getbicycles from '../database/database';
 
 function Home() {
+
+    // const [bicycles, setBicycles] = useState('');
+    // setBicycles(getbicycles().map((bicycle) => bicycle.model).join(', '));
+    getbicycles();
+
+    function logout(){
+        window.location.href = '/login';
+    }
+
     return(
         <>
         <nav className={styles.navdiv}>
-            <div className={styles.title}>SALAD</div>
+            <div className={styles.title}>Cyclehub</div>
             <div>
                 <button className={styles.navbutton}>Profile</button>
-                <button className={styles.navbutton}><img src={img} className={styles.imgicon}></img>Logout</button>
+                <button className={styles.navbutton} onClick={logout}><img src={img} className={styles.imgicon}></img>Logout</button>
             </div>       
         </nav>
 

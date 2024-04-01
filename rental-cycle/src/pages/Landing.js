@@ -17,7 +17,7 @@ function Landing() {
         <header className={styles.all}>
             <nav className={styles.navbar}>
                 <div className={styles.navdiv}>
-                    <div className={styles.logo}><a href=" ">SALAD</a></div>
+                    <div className={styles.logo}><a href=" ">Cyclehub</a></div>
                     <ul>
                         <li className={styles.link}>
                             <button className={styles.button1} onClick={aboutUs}>About Us</button>
