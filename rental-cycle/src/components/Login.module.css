@@ -1,41 +1,45 @@
 .imgback{
     background-color: rgb(107, 191, 89);
-    margin-right: 10%;
-    width: 150%;
+    margin-right: 0%;
+    width: 50%;
 }
 .img{
-    width:400px;
-    height: 400px;
-    margin-top: 25%;
-    margin-left: 20%;
-    margin-bottom: 70%;
     background-color: rgb(107, 191, 89, 0);
+    width: 40vw;
+    height: 40vw;
 }
 .title{
     color: white;
     font-family: 'Cooper Black';
-    padding-left: 30%;
     font-size: 60px;
     font-weight: 300;
-    margin-top: 20%;
+    padding: 20px;
 }
 .wholething{
     display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.right{
+    margin: 20px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .info{
-    padding-left: 5%;
     background-color:black;
     color: white;
     border-radius: 10px;
-    height: 68px;
     border-color: white;
     border-width: 2px;
     width:300px;
-    margin-top: 0%;
-    margin-left: 20%;
-    margin-bottom: 10px;
     align-items: center;
     font-size: 18px;
+    margin: 10px;
+    padding: 10px;
 }
 .password{
     color: white;
@@ -56,7 +60,6 @@
     border-radius: 10px;
     font-size: 24px;
     margin-bottom: 10px;
-    font-family: 'sans-serif';
     
  }
  .button2{
@@ -66,7 +69,6 @@
     background-color: #263238;
     border-radius: 10px;
     font-size: 24px;
-    font-family: 'sans-serif';
 
     
  }

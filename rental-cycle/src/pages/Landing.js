@@ -4,17 +4,30 @@ import gif from '../assets/Ride a bicycle.gif';
 
 
 function Landing() {
+    function signIn(){
+        window.location.href = '/login';
+    }
+    function signUp(){
+        window.location.href = '/signup';
+    }
+    function aboutUs(){
+        window.location.href = '/about';
+    }
     return(
         <header className={styles.all}>
             <nav className={styles.navbar}>
                 <div className={styles.navdiv}>
-                    <div className={styles.logo}><a href=" ">CycleHub</a></div>
+                    <div className={styles.logo}><a href=" ">SALAD</a></div>
                     <ul>
                         <li className={styles.link}>
-                            <button className={styles.button1}>About Us</button>
+                            <button className={styles.button1} onClick={aboutUs}>About Us</button>
                         </li>
-                        <li className={styles.link}><a href=" ">Login</a>   </li>
-                        <li className={styles.link}><a href=" "><div className={styles.link1}>Get Started</div></a>  </li>
+                        <li className={styles.link}>
+                            <button className={styles.button1} onClick={signIn}>Login</button>
+                        </li>
+                        <li className={styles.link}>
+                            <button className={styles.button2} onClick={signUp}>Sign Up</button>
+                        </li>
                     </ul>
                 </div>
             </nav>
