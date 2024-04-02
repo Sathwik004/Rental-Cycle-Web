@@ -1,24 +1,26 @@
 import styles from '../components/Login.module.css';
 import React from 'react';
 import img from '../assets/loginpageimg.gif';
-import getnames from '../database/database';
 import supabase from '../database/client';
 import { useState } from 'react';
 
 
-function Login() {
+function SignUp() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    function signIn() {
+    function signUp() {
         if (email === '' || password === '') {
             alert('Please fill all the fields');
             return;
         }
-        // supabase.auth.signInwithPassword({
-        //     email: '',
-        //     password: ''
-        // })
+        supabase.auth.signInwithPassword({
+            email: email,
+            password: password,
+            option : {
+                redirectTo : '/home'
+            }
+        })
         //window.location.href = '/home';
 
         
@@ -35,7 +37,7 @@ function Login() {
             <div className={styles.imgback}>
                 <img src={img} className={styles.img}></img>
             </div>
-            <form className={styles.right}>
+            <form className={styles.right} onSubmit={signUp}>
                 <label className={styles.title}>Sign Up</label>
                 <input type='text' placeholder='Email' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
                 <input type='password' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)} required></input>
@@ -48,4 +50,4 @@ function Login() {
     );
 }
 
-export default Login
+export default SignUp;

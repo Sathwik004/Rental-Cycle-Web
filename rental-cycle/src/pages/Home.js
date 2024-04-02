@@ -2,15 +2,18 @@ import styles from '../components/Homepage.module.css';
 import React, { useState } from 'react';
 import img from '../assets/logout.jpg';
 import img1 from '../assets/homepageimg.jpg'
-import getbicycles from '../database/database';
+import supabase from '../database/client';
 
 function Home() {
 
-    // const [bicycles, setBicycles] = useState('');
-    // setBicycles(getbicycles().map((bicycle) => bicycle.model).join(', '));
-    getbicycles();
+    console.log('In Home page');
 
-    function logout(){
+    async function logout(){
+        const {error} = await supabase.auth.signOut();
+        if (error) {
+            console.log('error',error.message);
+            return;
+        }
         window.location.href = '/login';
     }
 
@@ -29,7 +32,6 @@ function Home() {
             <div className={styles.whole}>
                 <p className={styles.para1}><span className={styles.wordcolor}>Skip</span> the hassle of owning and maintaining a bike.  <span className={styles.wordcolor}>Rent one </span>whenever you need it!</p>
                 <p className={styles.para2}>Book Your Cycle Now</p>
-                <button className={styles.button}>Book now</button>
             </div>
         </div>
         <div className={styles.footer}>

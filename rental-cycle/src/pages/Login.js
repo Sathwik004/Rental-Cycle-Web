@@ -4,25 +4,33 @@ import img from '../assets/loginpageimg.gif';
 import getnames from '../database/database';
 import supabase from '../database/client';
 import { useState } from 'react';
+import AppContext, { useAppContext } from '../context/context';
 
 
 function Login() {
+    console.log('App context',useAppContext());
+    const { user } = useAppContext();
+    console.log('user',user);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(false);
 
-    const signIn = async() => {
+    const signIn = async (event) => {
+        console.log('event ',event);
+        event.preventDefault();
         if (email === '' || password === '') {
-            return;}
-        const {data, error} = await supabase.auth.signUp({
+            return;
+        }
+
+        const { data, error } = await supabase.auth.signInWithPassword({
             email: email,
-            password: password
+            password: password,
             
         })
-        console.log(data);
-        if (error)
-        {  
-            console.log(error.message);
+        setLoading(true);
+        console.log('data', data);
+        if (error) {
+            console.log('error',error.message);
             return;
         }
     }
@@ -46,7 +54,8 @@ function Login() {
     //     return () => {
     //         authListner.unsubscribe();
     //     }
-    // })
+    // });
+
     function cancel() {
         window.location.href = '/';
     }
@@ -57,17 +66,17 @@ function Login() {
             <div className={styles.imgback}>
                 <img src={img} className={styles.img}></img>
             </div>
-            <form className={styles.right}>
+            <form className={styles.right} onSubmit={signIn}>
                 <label className={styles.title}>Login </label>
                 <input type='text' placeholder='Registration' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
                 <input type='password' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)} required></input>
                 <div className={styles.password}>Forgot Password?</div>
-                <button type='submit'  className={styles.button1} onClick={signIn}>Login</button>
-                <button type='button'  className={styles.button2} onClick={cancel}>Cancel</button>
+                <button type='submit' className={styles.button1} disabled={loading}>{loading? 'Loading...':'Login'}</button>
+                <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
             </form>
 
         </div>
     );
 }
 
-export default Login
+export default Login;
