@@ -1,12 +1,16 @@
 .imgback{
     background-color: rgb(107, 191, 89);
     margin-right: 0%;
-    width: 50%;
+    width: 600px;
+    height: 800px;
+
 }
 .img{
     background-color: rgb(107, 191, 89, 0);
-    width: 40vw;
-    height: 40vw;
+    width: 400px;
+    height: 400px;
+    padding-left: 80px;
+    padding-top: 40%;
 }
 .title{
     color: white;
@@ -23,7 +27,7 @@
 }
 .right{
     margin: 20px;
-    width: 50%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: center;

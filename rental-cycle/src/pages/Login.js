@@ -3,7 +3,6 @@ import React,{ useState } from 'react';
 import img from '../assets/loginpageimg.gif';
 import getnames from '../database/database';
 import supabase from '../database/client';
-import { useState } from 'react';
 
 
 function Login() {
