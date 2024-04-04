@@ -1,7 +1,7 @@
 import styles from '../components/Homepage.module.css';
 import React, { useState } from 'react';
 import img1 from '../assets/homepageimg.jpg'
-import getbicycles from '../database/database';
+import supabase from '../database/client';
 import img from '../assets/logout.jpg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -43,11 +43,14 @@ function Home() {
         slidesToScroll: 1
         
     };
-    // const [bicycles, setBicycles] = useState('');
-    // setBicycles(getbicycles().map((bicycle) => bicycle.model).join(', '));
-    getbicycles();
+    console.log('In Home page');
 
-    function logout(){
+    async function logout(){
+        const {error} = await supabase.auth.signOut();
+        if (error) {
+            console.log('error',error.message);
+            return;
+        }
         window.location.href = '/login';
     }
 

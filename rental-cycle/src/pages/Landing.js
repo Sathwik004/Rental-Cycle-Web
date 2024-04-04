@@ -35,8 +35,8 @@ function Landing() {
                 <p className={styles.para1}>GET AROUND THE CAMPUS THE <span className={styles.wordcolor}>EASY</span> AND <span className={styles.wordcolor}>ECO-FRIENDLY</span> WAY!</p>
                 <img src={gif} className={styles.pagegif} />
             </div>
-            <p className={styles.para2}>Reduce carbon footprint and<p>embrace a healthy life-style</p> </p>
-
+            <p className={styles.para2}>Reduce carbon footprint and<br /> embrace a healthy life-style</p>
+            
         </header>
     );
 }
