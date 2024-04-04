@@ -13,7 +13,6 @@ function Content()
 
   const { user } = useAppContext();
 
-  console.log('user in APP' , user);
 
   return user ? (
     <Router>

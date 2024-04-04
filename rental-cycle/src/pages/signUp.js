@@ -11,11 +11,11 @@ function SignUp() {
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {user, setUser} = useAppContext();
+    const {user, setUser, session} = useAppContext();
     
 
     useEffect(() => {
-        if(user)
+        if(user && session)
         {
             navigate('/home');
         }
@@ -33,13 +33,15 @@ function SignUp() {
             password: password,
         });
 
-
+        setLoading(false);
         console.log('data', data);
         if (error) {
+            alert(error.message, 'User already exists');
             console.log('error', error.message);
             return;
         }
         setUser(data?.user);
+       
 
     }
     function cancel() {
