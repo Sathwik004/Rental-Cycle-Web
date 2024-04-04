@@ -36,7 +36,7 @@ const AppContextProvider = ({ children }) => {
     }, [user]);
 
     return (
-        <AppContext.Provider value={{ user, session }}>
+        <AppContext.Provider value={{ user, setUser, session, setSession }}>
             {children}
         </AppContext.Provider>
     );

@@ -1,18 +1,25 @@
 import styles from '../components/Login.module.css';
-import React from 'react';
+import React, { useEffect, useState  } from 'react';
 import img from '../assets/loginpageimg.gif';
 import supabase from '../database/client';
-import { useState } from 'react';
 import { useAppContext } from '../context/context';
+import { useNavigate } from 'react-router-dom';
 
 
 function SignUp() {
+    const navigate = useNavigate();
     const [loading, setLoading] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const {setUser} = useAppContext();
+    const {user, setUser} = useAppContext();
     
 
+    useEffect(() => {
+        if(user)
+        {
+            navigate('/home');
+        }
+    },[user]);
     const signUp = async (event) => {
         console.log('event ', event);
         event.preventDefault();

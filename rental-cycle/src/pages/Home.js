@@ -1,5 +1,5 @@
 import styles from '../components/Homepage.module.css';
-import React, { useState } from 'react';
+import React from 'react';
 import img1 from '../assets/homepageimg.jpg'
 import supabase from '../database/client';
 import img from '../assets/logout.jpg';
@@ -60,7 +60,9 @@ function Home() {
             <div className={styles.title}>SALAD</div>
             <ul className={styles.unorderlist}>
                 <li className={styles.link}>Profile</li>
-                <li className={styles.link1}><img src={img} className={styles.imgicon}></img>Logout</li>
+                <li className={styles.link1} onClick={logout}>
+                    <img src={img} className={styles.imgicon}></img>Logout
+                    </li>{/*onClick={logout*/}
             </ul>
         </nav>
 
