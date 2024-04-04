@@ -2,11 +2,7 @@ import styles from '../components/Login.module.css';
 import React,{ useState } from 'react';
 import img from '../assets/loginpageimg.gif';
 import supabase from '../database/client';
-<<<<<<< HEAD
-=======
-import { useState } from 'react';
 import { useAppContext } from '../context/context';
->>>>>>> 1b50071fbf6fdeb9f1bcce5b0f7c0703ca891bae
 
 
 function Login() {

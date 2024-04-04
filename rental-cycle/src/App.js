@@ -5,7 +5,6 @@ import NoPage from './pages/NoPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Booking from './pages/Booking';
 import SignUp from './pages/signUp';
-import BookingPage from './pages/Bookingpage';
 import { Fragment, } from 'react';
 import { AppContextProvider, useAppContext } from './context/context';
 
@@ -21,7 +20,7 @@ function Content()
       <Routes>
         <Route index element={<Landing />} />
         <Route path={["/home", "/login","/signup"]} element={<Home />} />
-        <Route path="/booking" element={<BookingPage />} />
+        <Route path="/booking" element={<Booking />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
     </Router>
