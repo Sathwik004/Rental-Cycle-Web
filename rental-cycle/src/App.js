@@ -3,6 +3,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Booking from './pages/Booking';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route index element={<Landing />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/book" element={<Booking />} />
           <Route path="/home" element={<Home />} />
           <Route path='*' element={<NoPage />} />
         </Routes>

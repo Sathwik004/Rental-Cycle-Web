@@ -1,0 +1,90 @@
+.imgback{
+    background-color: rgb(107, 191, 89);
+    margin-right: 0%;
+    width: 600px;
+    height: 800px;
+
+}
+.img{
+    background-color: rgb(107, 191, 89, 0);
+    width: 400px;
+    height: 400px;
+    padding-left: 80px;
+    padding-top: 40%;
+}
+.title{
+    color: white;
+    font-family: 'Cooper Black';
+    font-size: 60px;
+    font-weight: 300;
+    padding: 20px;
+}
+.wholething{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+}
+.leftside{
+    width: 30%
+}
+.right{
+    margin-left: 350px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.paying{
+    display: flex;
+    height: 10%;
+    width: 40%;
+    margin-top: 30px;
+    gap: 20px;
+}
+.info{
+    background-color:black;
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    width:300px;
+    align-items: center;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+}
+.password{
+    color: white;
+    margin-left: 21%;
+    padding-bottom: 40px;
+}
+ .boxes{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+
+ }
+ .button1{
+    height: 50px;
+    width: 337px;
+    border: none;
+    color: white;
+    background-color: #08A045;
+    border-radius: 10px;
+    font-size: 24px;
+    margin-bottom: 10px;
+    
+ }
+ .button2{
+    height: 50px;
+    width: 337px;
+    color: white;
+    border: none;
+    background-color: #263238;
+    border-radius: 10px;
+    font-size: 24px;
+
+    
+ }
