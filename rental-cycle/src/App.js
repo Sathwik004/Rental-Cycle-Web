@@ -19,9 +19,13 @@ function Content()
     <Router>
       <Routes>
         <Route index element={<Landing />} />
+<<<<<<< HEAD
         <Route path={"/home"} element={<Home />} />
         <Route path={"/login"} element={<Login />} />
         <Route path={"/signup"} element={<SignUp />} />
+=======
+        <Route path={["/home", "/login","/signup"]} element={<Home />} />
+>>>>>>> 43f3f3ee9e7a306cf5bb5d39295a9c255777206d
         <Route path="/booking" element={<Booking />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
