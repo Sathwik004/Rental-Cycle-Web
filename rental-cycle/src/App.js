@@ -19,7 +19,7 @@ function Content()
     <Router>
       <Routes>
         <Route index element={<Landing />} />
-        <Route path="/home" element={<Home />} />
+        <Route path={["/home", "/login","/signup"]} element={<Home />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path='*' element={<NoPage />} />
       </Routes>

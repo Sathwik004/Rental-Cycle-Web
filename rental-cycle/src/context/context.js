@@ -33,7 +33,7 @@ const AppContextProvider = ({ children }) => {
         return () => {
             authListner.unsubscribe();
         };
-    }, []);
+    }, [user]);
 
     return (
         <AppContext.Provider value={{ user, session }}>
