@@ -2,27 +2,34 @@
     margin: 0px 20px;
   }
 .cardstarts{
-    width: 80%;
+    width: 90%;
     margin: auto;
     padding-top: 60px;
     padding-bottom: 100px;
 }
 
-.card_item{
-    color: black;
-    background-color: lightgreen;
+.card{
+    color: white;
+    background-color: #202020;
     height: 200px;
-    border-radius: 0.85rem;
-    width: 20px;
+    width: 100vw;
+    margin: 20px;
+    border-radius: 15px;
 }
-.card_name{
-    height: 45px;
+h1{
+    padding: 120px 60px 0px 60px;
+    color: white;
+    font-size: 50px;
+}
+h2{
     width: 100%;
-    background-color: white;
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 20px;
+    margin: 20px;
+}
+p{
+    margin: 20px;
+    height: 40px;
+
 }
 .review1{
     text-align: center;
@@ -30,39 +37,44 @@
     font-weight: 600;
 }
 .buttonbook{
-    border-width: 2px;
-    border-color: red;
-    background-color: black;
-    color: white;
+    border: none;
+    background-color: #6BBF59;
+    color: black;
     padding: 10px;
-    margin-top: 40px;
-    margin-left: 60%;
-    border-radius: 100px;
+    margin: 20px 20px 10px 10px;
+    border-radius: 5px;
         
 }
 
-
-
-
-*{
-    text-decoration: none;
-    margin-top: 0;
+.buttoncontainer
+{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 }
+
+
 .wholething{
     width: 100%;
 }
 
+header{
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: last baseline;
+    font-family: 'Cooper Black';
+    font-size: 20px;
+    color: white;
+    padding: 20px 60px;
+}
 
-.navdiv{
+nav{
     color: white;
     display: flex;
     font-size: 50px;
     font-weight: 900;
-    padding-left: 20px;
-    padding-right: 50px;
-    padding-top: 30px;
-    padding-bottom: 50px;
-    margin-top: 0px;
+    padding: 60px 20px;
     align-items: center;
     font-family: inter;
     justify-content: space-between;
@@ -71,13 +83,11 @@
 .title{
     font-size: 50px;
     font-family: 'Cooper Black';
-    padding-left: 80px;
     
 }
 .unorderlist{
     display: flex;
     align-items: center;
-    padding-bottom: 20px;
 }
 
 .imgicon{
@@ -90,12 +100,11 @@
     display: flex;
     font-size: 16px;
     justify-content: space-between;
-    padding-right: 10px;
+    padding-right: 40px;
     align-items: center;
     
 }
 .link1{
-    padding: 16px 24px;
     border: none;
     background-color: black;
     color: white;
@@ -104,7 +113,6 @@
     margin-right: 90px;
 }
 .wordcolor{
-    font-size: 36px;
     color: #3ED14D;
 }
 
@@ -124,13 +132,10 @@
     color: #6BBF59;
     font-family: 'Cooper Black';
 }
-.para2{
+.para{
     color: white;
     font-size: 48px;
     font-family: 'Cooper Black';
-    padding-left: 400px;
-    position: flex;
-    padding-top: 50px;
 
 }
 
