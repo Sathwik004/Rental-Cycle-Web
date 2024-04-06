@@ -24,19 +24,16 @@ const AppContextProvider = ({ children }) => {
 
                 } else if (event === "SIGNED_OUT") {
                     console.log("Signed out");
-                    window.location.href = "/login";
                     setUser(null);
                 }
 
             }
         );
-        return () => {
-            authListner.unsubscribe();
-        };
+        return () => authListner.unsubscribe();
     }, [user]);
 
     return (
-        <AppContext.Provider value={{ user, session }}>
+        <AppContext.Provider value={{ user, setUser, session, setSession }}>
             {children}
         </AppContext.Provider>
     );

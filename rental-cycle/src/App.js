@@ -18,8 +18,10 @@ function Content()
   return user ? (
     <Router>
       <Routes>
-        <Route index element={<Landing />} />
-        <Route path={["/home", "/login","/signup"]} element={<Home />} />
+        <Route index element={<Home/>} />
+        <Route path={"/landing"} element={<Landing  />} />
+        <Route path={"/login"} element={<Home />} />
+        <Route path={"/signup"} element={<Home />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path='*' element={<NoPage />} />
       </Routes>

@@ -1,17 +1,25 @@
 import styles from '../components/Login.module.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import img from '../assets/loginpageimg.gif';
 import supabase from '../database/client';
 import { useState } from 'react';
 import { useAppContext } from '../context/context';
+import { useNavigate } from 'react-router';
 
 
 function Login() {
-    const { setUser } = useAppContext();
+    const navigate = useNavigate(); 
+    const { user, setUser ,session} = useAppContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
 
+    useEffect(() => {
+        console.log('user in login', user);
+        if (user) {
+            navigate('/home');
+        }},[user,session]);
+            
 
     const signIn = async (event) => {
         console.log('event ', event);
@@ -24,7 +32,7 @@ function Login() {
         const { data, error } = await supabase.auth.signInWithPassword({
             email: email,
             password: password,
-        })
+        });
 
         
         console.log('data', data);
@@ -35,12 +43,12 @@ function Login() {
             setLoading(false);
             return;
         }
-        setUser(data?.user);
+        //setUser(data?.user);
     }
 
 
     function cancel() {
-        window.location.href = '/';
+        navigate('/');
     }
 
     return (
