@@ -17,20 +17,18 @@ export default function Card({data}) {
     };
 
   return (
-    <div className={styles.cardstarts}>
-            <div >
-            <Slider {...settings}>
-                {data.map((item)=>(
+    <div className={styles.cardcontainer}>
+        <div className={styles.cardstarts}>
+            {data.map((item)=>(
                     <div className={styles.card}>
                             <h2>{item.location_name}</h2>
                             <p>{item.lot_count} cycles available</p>
-                            <div className={styles.buttoncontainer}>
+                            
                                 <button className={styles.bookbutton}>Book Now</button>
-                            </div>
                     </div>
                 ))}
-            </Slider>
-            </div>
+        </div>
+                
         </div>
   );
 }

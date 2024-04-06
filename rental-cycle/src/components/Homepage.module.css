@@ -3,6 +3,7 @@
     margin-top: 0;
 }
 
+
 .navdiv{
     color: white;
     display: flex;
@@ -100,33 +101,49 @@ footer{
 }
 
 .card{
-    margin: auto;
+    margin: 10px;
+    padding: 20px;
     background-color: #303030;
     color: white;
-    height: 200px;
-    width: 100px;
-    padding: 20px;
+    height: 125px;
+    width: 250px;
     border-radius: 20px;
+    position: relative;
 }
 
-.bookcontainer{
+.bookcontainerr{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    align-items: start;
     
 }
 
 .bookbutton{
     margin: 15px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
     display: flex;
+    width: 80px;
+    height: 40px;
     justify-content: center;
+    align-items: center;
     padding: 5px;
     background-color: #08A045;
     color: white;
+    font-weight: bold;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .cardstarts{
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: auto;
+}
+
+.cardcontainer{
     margin: 60px;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
 }
