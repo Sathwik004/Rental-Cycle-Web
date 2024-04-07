@@ -100,18 +100,6 @@
     display: flex;
     align-items: center;
 }
-<<<<<<< HEAD
-.button1{
-    background-color: black;
-    color: white;
-    border-width: 0px;
-    font-size: 16px;
-    font-weight: 900;
-    font-family: 'lucida fax';
-    padding-right: 14px;
-}
-
-=======
 
 .button1 {
     background-color: black;
@@ -129,4 +117,3 @@
     padding: 10px;
     font-size: 16px;
 }
->>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10

@@ -1,16 +1,51 @@
-import Home from './pages/Home';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
-import Booking from './pages/Bookingpage';
+import Home from './pages/Home';
+import NoPage from './pages/NoPage';
+import SignUp from './pages/signUp';
+import BookingPage from './pages/Bookingpage';
+import { Fragment, } from 'react';
+import { AppContextProvider, useAppContext } from './context/context';
+
+function Content()
+{
+
+  const { user } = useAppContext();
+
+  console.log('user in APP' , user);
+
+  return user ? (
+    <Router>
+      <Routes>
+        <Route index element={<Home/>} />
+        <Route path={"/landing"} element={<Landing  />} />
+        <Route path={"/login"} element={<Home />} />
+        <Route path={"/signup"} element={<Home />} />
+        <Route path="/booking" element={<BookingPage />} />
+        <Route path='*' element={<NoPage />} />
+      </Routes>
+    </Router>
+  ) : (
+    <Router>
+      <Routes>
+        <Route index element={<Landing />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path='*' element={<NoPage />} />
+      </Routes>
+    </Router>
+  );
+}
 
 function App() {
+
+
   return (
-    <div>
-      <Landing />
-      <Home />
-      <Login />
-      <Booking />
-    </div>
+    <Fragment>
+      <AppContextProvider>
+        <Content />
+      </AppContextProvider>
+    </Fragment>
   );
 }
 

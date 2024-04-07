@@ -4,7 +4,7 @@ import img from '../assets/bookingpageimg.gif'
 import boxes from '../assets/bookingpageinput.jpg'
 
 
-function booking(){
+function BookingPage(){
     return(
         <>
         <div className={styles.all}>
@@ -37,4 +37,4 @@ function booking(){
         </>
     );
 }
-export default booking
+export default BookingPage;

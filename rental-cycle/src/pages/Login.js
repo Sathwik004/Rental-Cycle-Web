@@ -1,26 +1,54 @@
 import styles from '../components/Login.module.css';
-import React from 'react';
+import React, { useEffect } from 'react';
 import img from '../assets/loginpageimg.gif';
-import getnames from '../database/database';
 import supabase from '../database/client';
 import { useState } from 'react';
+import { useAppContext } from '../context/context';
+import { useNavigate } from 'react-router';
 
 
 function Login() {
+    const navigate = useNavigate(); 
+    const { user, setUser ,session} = useAppContext();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    function signIn() {
-        // supabase.auth.signIn({
-        //     email: '',
-        //     password: ''
-        // })
-        //window.location.href = '/home';
-        console.log(email, password);  
+    useEffect(() => {
+        console.log('user in login', user);
+        if (user) {
+            navigate('/home');
+        }},[user,session]);
+            
+
+    const signIn = async (event) => {
+        console.log('event ', event);
+        event.preventDefault();
+        if (email === '' || password === '') {
+            return;
+        }
+        setLoading(true);
+
+        const { data, error } = await supabase.auth.signInWithPassword({
+            email: email,
+            password: password,
+        });
+
+        
+        console.log('data', data);
+        if (error) {
+            console.log('error', error.message);
+            //If error is 'Invalid login credentials' then show error message then display this msg
+            alert(error.message);
+            setLoading(false);
+            return;
+        }
+        //setUser(data?.user);
     }
 
+
     function cancel() {
-        window.location.href = '/';
+        navigate('/');
     }
 
     return (
@@ -30,25 +58,17 @@ function Login() {
                     <img src={img} className={styles.img}></img>
                 </div>
             </div>
-<<<<<<< HEAD
-            <div className={styles.rightside}>
-                <h1 className={styles.title}>LOGIN</h1>
-                <input type='text' placeholder='Registration' className={styles.info}></input>
-                <input type='text' placeholder='Password' className={styles.info}></input>
-=======
-
-            <form className={styles.right}>
+            <form className={styles.right} onSubmit={signIn}>
                 <label className={styles.title}>Login </label>
-                <input type='text' placeholder='Registration' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)}></input>
-                <input type='text' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)}></input>
->>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10
+                <input type='text' placeholder='Registration' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+                <input type='password' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)} required></input>
                 <div className={styles.password}>Forgot Password?</div>
-                <input type='button' value='Login' className={styles.button1} onClick={signIn}></input>
-                <input type='button' value='Cancel' className={styles.button2} onClick={cancel}></input>
+                <button type='submit' className={styles.button1} disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>
+                <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
             </form>
 
         </div>
     );
 }
 
-export default Login
+export default Login;

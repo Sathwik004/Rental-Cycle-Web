@@ -1,11 +1,19 @@
 import supabase from './client.js';
 
-async function getnames() {
+async function getAvailableBicycles() {
     
-    const {data,error} = await supabase.from('test').select('*');
-    
-    console.log(data); 
+    let {data,error} = await supabase.rpc('get_location_lot_count');
+    //console.log('in getAvailable ',data);
+    if (error) 
+    {
+        console.error(error)
+        return null;
+    }
+    else 
+    {
+        console.log('in getAvailabeee ',data)
+    }
     return data;
 }
 
-export default getnames;
+export default getAvailableBicycles;

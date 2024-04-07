@@ -1,41 +1,57 @@
 import styles from '../components/Homepage.module.css';
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import img from '../assets/logout.jpg';
-import img1 from '../assets/homepageimg.jpg';
-
+import img1 from '../assets/homepageimg.jpg'
+import supabase from '../database/client';
+import getAvailableBicycles from '../database/database';
+import Card from '../components/card';
 
 function Home() {
+    const [data, setData] = useState([]);
+    useEffect(() => {
+        getAvailableBicycles().then((data) => setData(data));
+        console.log('data in useEffect',data);
+    }, []);
+    
+    console.log('In Home page');
+
+    async function logout(){
+        const {error} = await supabase.auth.signOut();
+        if (error) {
+            console.log('error',error.message);
+            return;
+        }
+        window.location.href = '/login';
+    }
+
     return(
         <>
-        <nav className={styles.navdiv}>
-            <div className={styles.title}>SALAD</div>
-<<<<<<< HEAD
-            <ul className={styles.unorderlist}>
-                <li className={styles.link}>Profile</li>
-                <img src={img} className={styles.imgicon}></img>
-                <li className={styles.link}>Logout</li>
-            </ul>
-=======
+        <header>
+            <nav className={styles.navdiv}>
+            <div className={styles.title}>Cyclehub</div>
             <div>
                 <button className={styles.navbutton}>Profile</button>
-                <button className={styles.navbutton}><img src={img} className={styles.imgicon}></img>Logout</button>
+                <button className={styles.navbutton} onClick={logout}><img src={img} className={styles.imgicon}></img>Logout</button>
             </div>       
->>>>>>> 91b39d3f7ed183e651cdce34c7a6885ebec56c10
         </nav>
+        </header>
+        
 
         <div className={styles.body}>
             <img src={img1} className={styles.midimg}></img>
             <div className={styles.whole}>
                 <p className={styles.para1}><span className={styles.wordcolor}>Skip</span> the hassle of owning and maintaining a bike.  <span className={styles.wordcolor}>Rent one </span>whenever you need it!</p>
                 <p className={styles.para2}>Book Your Cycle Now</p>
-                <button className={styles.button}>Book now</button>
             </div>
         </div>
-        <div className={styles.footer}>
+
+        <Card data={data}/>
+
+        <footer>
             <div>About us</div>
             <div>Terms and Condition</div>
             <div>Help</div>
-        </div>
+        </footer>
         </>
     );
 }
