@@ -34,7 +34,7 @@
     font-size: 16px;
     justify-content: space-between;
     padding-right: 30px;
-    font-weight: 600;
+    font-weight: 600px;
 
 }
 .link a{
@@ -82,15 +82,23 @@
 
 .pagegif{
     padding-left: 20%;
-    width: 350px;
+    width: 550px;
     height: 350px;
     padding-top: 1%;
-    padding-right: 3%;
+    padding-right: 1%;
     background-image: url();
 }
 .midarea{
     display: flex;
     align-items: center;
+}
+.button1{
+    background-color: black;
+    color: white;
+    border-width: 0px;
+    font-size: 16px;
+    font-weight: 600px;
+    font-family: 'lucida fax';
 }
 
 .button1 {

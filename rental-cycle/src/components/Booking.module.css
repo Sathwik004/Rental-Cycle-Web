@@ -21,34 +21,48 @@
 }
 .wholething{
     display: flex;
-    width: 100%;
+    width: 80%;
     align-items: center;
     justify-content: space-between;
 }
-.right{
-    margin: 20px;
-    width: 60%;
+.selection{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-}
-.info{
     background-color:black;
     color: white;
     border-radius: 10px;
     border-color: white;
     border-width: 2px;
-    width:300px;
-    align-items: center;
+    width:320px;
     font-size: 18px;
     margin: 10px;
     padding: 10px;
+    
+}
+.selection1{
+    font-size: 18px;
+    padding-top: 10px;
+}
+.leftside{
+    width: 30%
+}
+.right{
+    margin-left: 350px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.paying{
+    display: flex;
+    height: 10%;
+    width: 40%;
+    margin-top: 30px;
+    gap: 20px;
+}
 
-}
-input:-ms-input-placeholder{
-    background-color: black !important;
-}
 .password{
     color: white;
     margin-left: 21%;
@@ -60,9 +74,18 @@ input:-ms-input-placeholder{
     margin-left: 20%;
 
  }
+ .amount{
+    color: white;
+    font-size: 20px;
+    font-family: 'Cooper Black';
+    padding-top: 40px;
+    padding-bottom: 20px;
+
+ }
  .button1{
-    height: 68px;
+    height: 50px;
     width: 337px;
+    border: none;
     color: white;
     background-color: #08A045;
     border-radius: 10px;
@@ -71,15 +94,13 @@ input:-ms-input-placeholder{
     
  }
  .button2{
-    height: 68px;
+    height: 50px;
     width: 337px;
     color: white;
+    border: none;
     background-color: #263238;
     border-radius: 10px;
     font-size: 24px;
 
     
- }
- .rightside{
-    margin-left: 20%;
  }
