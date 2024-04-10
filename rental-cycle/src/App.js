@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import SignUp from './pages/signUp';
 import BookingPage from './pages/Booking';
+import Profile from './pages/Profile';
+
 import { Fragment, } from 'react';
 import { AppContextProvider, useAppContext } from './context/context';
 
@@ -23,6 +25,8 @@ function Content()
         <Route path={"/login"} element={<Home />} />
         <Route path={"/signup"} element={<Home />} />
         <Route path="/booking" element={<BookingPage />} />
+        <Route path="/profile" element={<Profile />} />
+
         <Route path='*' element={<NoPage />} />
       </Routes>
     </Router>
