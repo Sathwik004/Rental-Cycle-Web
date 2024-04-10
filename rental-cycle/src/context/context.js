@@ -8,29 +8,42 @@ const AppContextProvider = ({ children }) => {
     const [session, setSession] = useState(null);
 
     useEffect(() => {
-        const session = supabase.auth.getSession()
-            .then(({ data: { session } }) => {
-                setSession(session);
-                console.log('session after get', session);
-            });
+
 
         const { data: { subscription: authListner } } = supabase.auth.onAuthStateChange(
             (event, session) => {
-                setSession(session);
-                console.log('session after authstatechange', session);
-                console.log("event", event);
-                if (event === "SIGNED_IN") {
-                    setUser(session?.user);
-
-                } else if (event === "SIGNED_OUT") {
-                    console.log("Signed out");
-                    setUser(null);
+                
+                if (event === 'SIGNED_OUT') {
+                    setSession(null);
                 }
+                if(event === 'INITIAL_SESSION')
+                {
+                    supabase.auth.getSession().then(({data:{session}}) => {
+                        setSession(session);
+                        console.log('session in initial',session);
+                    });
 
+                }
+                if(event === 'TOKEN_REFRESHED')
+                {
+                    console.log('token refreshed');
+                    setSession(session);
+                }
+                else{
+                    setSession(session);
+                }
             }
         );
         return () => authListner.unsubscribe();
-    }, [user]);
+    }, []);
+
+    useEffect(() => {
+        if (session) {
+            setUser(session.user);
+        } else {
+            setUser(null);
+        }
+    }, [session]);
 
     return (
         <AppContext.Provider value={{ user, setUser, session, setSession }}>

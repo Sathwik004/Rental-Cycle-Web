@@ -42,6 +42,10 @@
     font-size: 18px;
     margin: 10px;
     padding: 10px;
+
+}
+input:-ms-input-placeholder{
+    background-color: black !important;
 }
 .password{
     color: white;

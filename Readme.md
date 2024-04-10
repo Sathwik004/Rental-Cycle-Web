@@ -4,19 +4,22 @@ Welcome to the Cycle Rental Systems web application! This application allows use
 
 ## TO DO
 
-- [ ] Set up database schema and models
-- [ ] Implement user authentication functionality
-- [ ] Implement user registration and login functionality
-- [ ] Create a dashboard for users to view available bicycles
+
 - [ ] Develop a booking system for users to reserve bicycles
 - [ ] Design an admin panel for managing bicycles and user accounts
 - [ ] Implement a payment gateway for rental transactions
 - [ ] Add a rating and feedback system for users to provide reviews
-- [ ] Create a basic UI layout for the application
-- [ ] Set up project structure and dependencies
+
 
 ## Finished Tasks
 
+
+- [ ] Set up database schema and models
+- [ ] Implement user authentication functionality
+- [ ] Implement user registration and login functionality
+- [ ] Create a dashboard for users to view available bicycles
+- [ ] Create a basic UI layout for the application
+- [ ] Set up project structure and dependencies
 - None
 
 

@@ -9,10 +9,6 @@ async function getAvailableBicycles() {
         console.error(error)
         return null;
     }
-    else 
-    {
-        console.log('in getAvailabeee ',data)
-    }
     return data;
 }
 

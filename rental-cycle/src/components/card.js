@@ -6,7 +6,6 @@ import styles from './Homepage.module.css';
 
 
 export default function Card({data}) {
-    console.log('data in card',data); 
     const settings = {
         dots: true,
         infinite: true,

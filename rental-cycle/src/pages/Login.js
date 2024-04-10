@@ -15,14 +15,12 @@ function Login() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        console.log('user in login', user);
         if (user) {
             navigate('/home');
-        }},[user,session]);
+        }},[user]);
             
 
     const signIn = async (event) => {
-        console.log('event ', event);
         event.preventDefault();
         if (email === '' || password === '') {
             return;
@@ -35,7 +33,7 @@ function Login() {
         });
 
         
-        console.log('data', data);
+
         if (error) {
             console.log('error', error.message);
             //If error is 'Invalid login credentials' then show error message then display this msg
