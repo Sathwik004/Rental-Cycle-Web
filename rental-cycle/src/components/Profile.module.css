@@ -1,5 +1,13 @@
-*{
-    color: lightgreen;
+.upperblock{
+    background-color: black;
+    height: 50px;
+    align-items: center;
+    padding-left: 400px;
+    font-family: 'cooper black';
+    color: white;
+    font-size: 40px;
+    padding-top: 50px;
+    
 }
 .profile{
     width:50%;

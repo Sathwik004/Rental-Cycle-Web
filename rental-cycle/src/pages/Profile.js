@@ -59,6 +59,9 @@ function Profile(){
       ];
     return(
         <>
+        <header className={styles.upperblock}>
+          YOUR  PROFILE
+        </header>
         <div className={styles.profile}>
             <div className={styles.firstcol}>
                 <div className={styles.name1}><div>NAME : </div> </div>  
