@@ -41,9 +41,9 @@ function Home() {
             <img src={img1} className={styles.midimg}></img>
             <div className={styles.whole}>
                 <p className={styles.para1}><span className={styles.wordcolor}>Skip</span> the hassle of owning and maintaining a bike.  <span className={styles.wordcolor}>Rent one </span>whenever you need it!</p>
-                <p className={styles.para2}>Book Your Cycle Now</p>
             </div>
         </div>
+        <p className={styles.para2}>Book Your Cycle Now</p>
 
         <Card data={data}/>
 

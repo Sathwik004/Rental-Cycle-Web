@@ -1,9 +1,10 @@
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import NoPage from './pages/NoPage';
 import SignUp from './pages/signUp';
-import BookingPage from './pages/Bookingpage';
+import BookingPage from './pages/Booking';
 import { Fragment, } from 'react';
 import { AppContextProvider, useAppContext } from './context/context';
 

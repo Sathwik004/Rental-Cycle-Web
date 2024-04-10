@@ -25,6 +25,25 @@
     align-items: center;
     justify-content: space-between;
 }
+.selection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:black;
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    width:320px;
+    font-size: 18px;
+    margin: 10px;
+    padding: 10px;
+    
+}
+.selection1{
+    font-size: 18px;
+    padding-top: 10px;
+}
 .leftside{
     width: 30%
 }
@@ -43,18 +62,7 @@
     margin-top: 30px;
     gap: 20px;
 }
-.info{
-    background-color:black;
-    color: white;
-    border-radius: 10px;
-    border-color: white;
-    border-width: 2px;
-    width:300px;
-    align-items: center;
-    font-size: 18px;
-    margin: 10px;
-    padding: 10px;
-}
+
 .password{
     color: white;
     margin-left: 21%;
@@ -64,6 +72,14 @@
     display: flex;
     flex-direction: column;
     margin-left: 20%;
+
+ }
+ .amount{
+    color: white;
+    font-size: 20px;
+    font-family: 'Cooper Black';
+    padding-top: 40px;
+    padding-bottom: 20px;
 
  }
  .button1{
