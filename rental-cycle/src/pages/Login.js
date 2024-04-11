@@ -58,7 +58,7 @@ function Login() {
             </div>
             <form className={styles.right} onSubmit={signIn}>
                 <label className={styles.title}>Login </label>
-                <input type='text' placeholder='Registration' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+                <input type='text' placeholder='Email' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
                 <input type='password' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)} required></input>
                 <div className={styles.password}>Forgot Password?</div>
                 <button type='submit' className={styles.button1} disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>

@@ -6,6 +6,9 @@ const AppContext = createContext({});
 const AppContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [session, setSession] = useState(null);
+    const [source, setSource] = useState(null);
+    const [locations, setLocations] = useState([]);
+
 
     useEffect(() => {
 
@@ -46,7 +49,7 @@ const AppContextProvider = ({ children }) => {
     }, [session]);
 
     return (
-        <AppContext.Provider value={{ user, setUser, session, setSession }}>
+        <AppContext.Provider value={{ user, setUser, session, source, setSource,locations,setLocations }}>
             {children}
         </AppContext.Provider>
     );

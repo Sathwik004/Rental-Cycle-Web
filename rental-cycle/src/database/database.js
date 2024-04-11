@@ -1,9 +1,8 @@
 import supabase from './client.js';
 
-async function getAvailableBicycles() {
+export async function getAvailableBicycles() {
     
     let {data,error} = await supabase.rpc('get_location_lot_count');
-    //console.log('in getAvailable ',data);
     if (error) 
     {
         console.error(error)
@@ -12,4 +11,13 @@ async function getAvailableBicycles() {
     return data;
 }
 
-export default getAvailableBicycles;
+export async function getAvailableSlots()
+{
+    let {data,error} = await supabase.rpc('get_empty_locations_with_count');
+    if (error) 
+    {
+        console.error(error)
+        return null;
+    }
+    return data;
+}

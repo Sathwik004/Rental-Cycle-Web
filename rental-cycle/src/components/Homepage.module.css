@@ -46,7 +46,6 @@
 
 *{
     text-decoration: none;
-    margin-top: 0;
 }
 .wholething{
     width: 100%;
@@ -67,6 +66,15 @@
     align-items: center;
     font-family: inter;
     justify-content: space-between;
+}
+
+.navbutton{
+    color: white;
+    background-color: black;
+    padding: 10px;
+    margin: 10px;
+    font-size: medium;
+    border: none;
 }
 
 .title{
@@ -193,7 +201,7 @@ footer{
 }
 
 .cardcontainer{
-    margin: 60px;
     display: flex;
     justify-content: center;
+    
 }

@@ -18,7 +18,8 @@ function Content()
   return session ? (
     <Router>
       <Routes>
-        <Route path="/home" element={<Home/>} />
+        <Route index element={<Home/>} />
+        <Route path="/home" element={<Home />} />
         <Route path="/landing" element={<Landing  />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
