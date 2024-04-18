@@ -40,7 +40,7 @@ function Home() {
                 <nav className={styles.navdiv}>
                     <div className={styles.title}>Cyclehub</div>
                     <div>
-                        <button className={styles.navbutton}>Profile</button>
+                        <button className={styles.navbutton} onClick={()=>navigate('/profile')}>Profile</button>
                         <button className={styles.navbutton} onClick={logout}><img src={img} className={styles.imgicon}></img>Logout</button>
                     </div>
                 </nav>
