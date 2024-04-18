@@ -34,9 +34,7 @@ function Booking() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        const form = event.target;
-        const formData = new FormData(form);
-        console.log('form data', formData);
+        console.log('form data', source," to ",destination);
     }
 
 
