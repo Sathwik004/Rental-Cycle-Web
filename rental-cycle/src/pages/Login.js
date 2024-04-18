@@ -15,14 +15,12 @@ function Login() {
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
-        console.log('user in login', user);
         if (user) {
             navigate('/home');
-        }},[user,session]);
+        }},[user]);
             
 
     const signIn = async (event) => {
-        console.log('event ', event);
         event.preventDefault();
         if (email === '' || password === '') {
             return;
@@ -35,7 +33,7 @@ function Login() {
         });
 
         
-        console.log('data', data);
+
         if (error) {
             console.log('error', error.message);
             //If error is 'Invalid login credentials' then show error message then display this msg
@@ -60,7 +58,7 @@ function Login() {
             </div>
             <form className={styles.right} onSubmit={signIn}>
                 <label className={styles.title}>Login </label>
-                <input type='text' placeholder='Registration' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+                <input type='text' placeholder='Email' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
                 <input type='password' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)} required></input>
                 <div className={styles.password}>Forgot Password?</div>
                 <button type='submit' className={styles.button1} disabled={loading}>{loading ? 'Loading...' : 'Login'}</button>

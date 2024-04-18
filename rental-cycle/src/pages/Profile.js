@@ -1,5 +1,6 @@
 import styles from '../components/Profile.module.css';
 import React, { PureComponent } from 'react';
+import img from '../assets/logout.jpg';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
 
@@ -59,44 +60,18 @@ function Profile(){
       ];
     return(
         <>
-        <header className={styles.upperblock}>
-          YOUR  PROFILE
-        </header>
-        <div className={styles.profile}>
-            <div className={styles.firstcol}>
-                <div className={styles.name1}><div>NAME : </div> </div>  
-                <div className={styles.loginid1}><div>LOGIN ID :  </div></div>
-                <div className={styles.Balance}><div>BALANCE : </div></div>
-            </div>
-            <div>
-                <span className={styles.money}>{profile_data[0].name}</span>
-                <span className={styles.money}>{profile_data[0].value}</span>
-                <span className={styles.money}>{profile_data[0].balance}</span>
-            </div>
-            <div>
+          <header>
+                <nav className={styles.navdiv}>
+                    <div className={styles.title}>CYCLE HUB</div>
+                    <div>
+                        <button className={styles.navbutton} >Home</button>
+                        <button className={styles.navbutton} ><img src={img} className={styles.imgicon}></img>Logout</button>
+                    </div>
+                </nav>
+            </header>
+       
 
-            </div>
-        </div>
-
-        <div  className={styles.chart1}>
-            <ResponsiveContainer className={styles.cont}>
-            <AreaChart
-                data={data2}
-                margin={{
-                top: 10,
-                right: 30,
-                left: 0,
-                bottom: 0,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Area type="monotone" dataKey="uv" stroke="white" fill="lightgreen" />
-            </AreaChart>
-            </ResponsiveContainer>
-        </div>
+        
 
         </>
     )

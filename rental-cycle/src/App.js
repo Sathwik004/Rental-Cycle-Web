@@ -13,17 +13,16 @@ import { AppContextProvider, useAppContext } from './context/context';
 function Content()
 {
 
-  const { user } = useAppContext();
+  const { session } = useAppContext();
 
-  console.log('user in APP' , user);
-
-  return user ? (
+  return session ? (
     <Router>
       <Routes>
         <Route index element={<Home/>} />
-        <Route path={"/landing"} element={<Landing  />} />
-        <Route path={"/login"} element={<Home />} />
-        <Route path={"/signup"} element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/landing" element={<Landing  />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/profile" element={<Profile />} />
 

@@ -1,46 +1,67 @@
 import styles from '../components/Booking.module.css';
 import img from '../assets/loginpageimg.gif';
+import { useNavigate } from 'react-router';
+import { useAppContext } from '../context/context';
+import { useEffect, useState } from 'react';
+import { getAvailableSlots } from '../database/database';
 
-const data1 = ['AB3', 'AB5', 'AB4','Library', 'AB2', 'Student Plaza','AB1', 'D-Block' ]
-const time1=[1,2,3,4]
 
 function Booking() {
-    
-    return(
-       <div className={styles.wholething}>
+    const navigate = useNavigate();
+    const { source} = useAppContext();
+    const [destination, setDestination] = useState(null);
+    const [availableSlotsInDest, setAvailableSlotsInDest] = useState(0);
+    const [availableSlots, setAvailableSlots] = useState([]);
+
+    function cancel() {
+        navigate('/');
+    }
+
+    useEffect(() => {
+        if (source === null) {
+            navigate('/');
+        }
+        getAvailableSlots().then((data) =>
+            setAvailableSlots(data.filter((location) => location.location_name !== source)));
+
+    }, []);
+
+    useEffect(() => {
+
+        const destinationSlots = availableSlots.find((location) => location.location_name === destination);
+        setAvailableSlotsInDest(destinationSlots?.lot_count);
+    }, [destination]);
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        console.log('form data', source," to ",destination);
+    }
+
+
+    return (
+        <div className={styles.wholething}>
             <div className={styles.leftside}>
                 <div className={styles.imgback}>
                     <img src={img} className={styles.img}></img>
                 </div>
             </div>
 
-            <form className={styles.right}>
-                
+            <form className={styles.right} onSubmit={handleSubmit}>
                 <label className={styles.title}>Booking Page </label>
-                <select className={styles.selection}>
-                    <option className={styles.selection1}>{data1[0]}</option>
-                    <option className={styles.selection1}>{data1[1]}</option>
-                    <option className={styles.selection1}>{data1[2]}</option>
-                    <option className={styles.selection1}>{data1[3]}</option>
-                    <option className={styles.selection1}>{data1[4]}</option>
-                    <option className={styles.selection1}>{data1[5]}</option>
-                    <option className={styles.selection1}>{data1[6]}</option>
-                    <option className={styles.selection1}>{data1[7]}</option>
+                <select className={styles.selection} onChange={(e) => setDestination(e.target.value)}>
+                    {availableSlots.map((item) => (
+                        <option className={styles.selection1}>{item.location_name}</option>
+                    ))}
                 </select>
-                <select className={styles.selection}>
-                    <option className={styles.selection1}>{time1[0]}</option>
-                    <option className={styles.selection1}>{time1[1]}</option>
-                    <option className={styles.selection1}>{time1[2]}</option>
-                    <option className={styles.selection1}>{time1[3]}</option>
-                </select>
-                <label className={styles.amount}>COST : <span>{}</span></label>
+                <label className={styles.amount}>{destination?`${availableSlotsInDest} slots available at ${destination}` : 'Select Destination'  }</label>
+                <label className={styles.amount}>COST : 40</label>
                 <div className={styles.paying}>
-                    <button type='submit'  className={styles.button1} >Pay</button>
-                    <button type='button'  className={styles.button2} >Cancel</button>
+                    <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
+                    <button type='submit' className={styles.button1}>Pay</button>
                 </div>
             </form>
 
-       </div> 
+        </div>
     )
 }
 
