@@ -1,6 +1,7 @@
 import styles from '../components/Landing.module.css';
 import React from 'react';
 import gif from '../assets/Ride a bicycle.gif';
+import Timer from './timer';
 
 
 function Landing() {
@@ -33,7 +34,6 @@ function Landing() {
                     </div>
                 </nav>
             </header>
-
             <div className={styles.midarea}>
                 <p className={styles.para1}>GET AROUND THE CAMPUS THE <span className={styles.wordcolor}>EASY</span> AND <span className={styles.wordcolor}>ECO-FRIENDLY</span> WAY!</p>
                 <img src={gif} className={styles.pagegif} />

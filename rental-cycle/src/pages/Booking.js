@@ -17,6 +17,11 @@ function Booking() {
         navigate('/');
     }
 
+    function onPayement() {
+        //go to timer page
+        //book a cycle
+    }
+
     useEffect(() => {
         if (source === null) {
             navigate('/');
@@ -57,7 +62,7 @@ function Booking() {
                 <label className={styles.amount}>COST : 40</label>
                 <div className={styles.paying}>
                     <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
-                    <button type='submit' className={styles.button1}>Pay</button>
+                    <button type='submit' className={styles.button1} onClick={onPayement}>Pay</button>
                 </div>
             </form>
 
