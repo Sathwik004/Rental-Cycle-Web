@@ -4,16 +4,26 @@ import img from '../assets/logout.jpg';
 import { useTable} from 'react-table';
 
 const data = [
-    {"datetime":"23" , "sou": "AB1", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹40"},
+    {"datetime":"23" , "sou": "AB1", "des":"Student Plaza", "dur": "30:32 min", "amt": "₹40"},
     {"datetime":"24" , "sou": "AB2", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹50"},
+    {"datetime":"25" , "sou": "AB3", "des":"Student Plaza", "dur": "13:21 min", "amt": "₹60"},
+    {"datetime":"26" , "sou": "AB4", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹70"},
+    {"datetime":"27" , "sou": "AB5", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹80"},
+    {"datetime":"23" , "sou": "AB1", "des":"Student Plaza", "dur": "17:21 min", "amt": "₹40"},
+    {"datetime":"24" , "sou": "AB2", "des":"Student Plaza", "dur": "20:21 min", "amt": "₹50"},
     {"datetime":"25" , "sou": "AB3", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹60"},
     {"datetime":"26" , "sou": "AB4", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹70"},
     {"datetime":"27" , "sou": "AB5", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹80"},
     {"datetime":"23" , "sou": "AB1", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹40"},
+    {"datetime":"24" , "sou": "AB2", "des":"Student Plaza", "dur": "4:21 min", "amt": "₹50"},
+    {"datetime":"25" , "sou": "AB3", "des":"Student Plaza", "dur": "14:21 min", "amt": "₹60"},
+    {"datetime":"26" , "sou": "AB4", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹70"},
+    {"datetime":"27" , "sou": "AB5", "des":"Student Plaza", "dur": "11:21 min", "amt": "₹80"},
+    {"datetime":"23" , "sou": "AB1", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹40"},
     {"datetime":"24" , "sou": "AB2", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹50"},
     {"datetime":"25" , "sou": "AB3", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹60"},
     {"datetime":"26" , "sou": "AB4", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹70"},
-    {"datetime":"27" , "sou": "AB5", "des":"Student Plaza", "dur": "10:21 min", "amt": "₹80"}
+    {"datetime":"27" , "sou": "AB5", "des":"Student Plaza", "dur": "14:21 min", "amt": "₹80"}
 ]
 
 
@@ -78,33 +88,43 @@ function Profile(){
             </div>
 
             <div className={styles.container}>
-                    <table {...getTableProps()}>
-                        <thead className={styles.tabletitle}>
-                            {headerGroups.map((headerGroup)=>(
+                <table {...getTableProps()}>
+                    <thead className={styles.tabletitle}>
+                        {headerGroups.map((headerGroup) => (
                             <tr {...headerGroup.getHeaderGroupProps()}>
-                                {headerGroup.headers.map((col)=>(
-                                    <th {...col.getHeaderProps()}>
+                                {headerGroup.headers.map((col, index) => (
+                                    <th key={index} {...col.getHeaderProps()}>
                                         {col.render("Header")}
                                     </th>
                                 ))}
                             </tr>
-                            ))}
-                        </thead>
-                        <tbody {...getTableBodyProps()}>
-                            {rows.map((row) => {
-                                prepareRow(row)
-                                return(
-                                    <tr {...row.getRowProps()}>
-                                        {row.cells.map((cell) =>(
-                                            <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
-                                        ))}
+                        ))}
+                    </thead>
+                    <tbody {...getTableBodyProps()}>
+                        {rows.map((row, rowIndex) => {
+                            prepareRow(row);
+                            return (
+                                <tr key={rowIndex} {...row.getRowProps()}>
+                                    {row.cells.map((cell, cellIndex) => {
+                                        const value = cell.value;
+                                        let cellClassName = '';
+                                        
+                                        if (cellIndex === 3) {
+                                            cellClassName = parseFloat(value) < 11 ? styles.greenColumn : styles.redColumn;
+                                        }
+                                        
+                                        return (
+                                            <td key={cellIndex} {...cell.getCellProps()} className={cellClassName}>
+                                                {cell.render("Cell")}
+                                            </td>
+                                        );
+                                    })}
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
 
-                                    </tr>
-                                )
-                            })}
-
-                        </tbody>
-                    </table>
 
             </div>
             
