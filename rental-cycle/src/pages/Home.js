@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import img from '../assets/logout.jpg';
 import img1 from '../assets/homepageimg.jpg'
 import supabase from '../database/client';
-import {getAvailableBicycles} from '../database/database';
+import {getAvailableBicycles, logout} from '../database/database';
 import Card from '../components/card';
 import { useNavigate } from 'react-router';
 import { useAppContext } from '../context/context';
@@ -17,16 +17,7 @@ function Home() {
     }, []);
 
 
-    async function logout() {
-        supabase.auth.signOut().then(({ error }) => {
-            if (error) {
-                console.log('error in logout', error);
-            }
-            else {
-                navigate('/');
-            }
-        });
-    }
+
 
     function handleBooking(location_name) {
         console.log('in handle booking', location_name);

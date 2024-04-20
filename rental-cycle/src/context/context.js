@@ -8,6 +8,8 @@ const AppContextProvider = ({ children }) => {
     const [session, setSession] = useState(null);
     const [source, setSource] = useState(null);
     const [locations, setLocations] = useState([]);
+    const [rentedCycle, setRentedCycle] = useState({});
+
 
 
     useEffect(() => {
@@ -43,13 +45,14 @@ const AppContextProvider = ({ children }) => {
     useEffect(() => {
         if (session) {
             setUser(session.user);
+            console.log(user);
         } else {
             setUser(null);
         }
     }, [session]);
 
     return (
-        <AppContext.Provider value={{ user, setUser, session, source, setSource,locations,setLocations }}>
+        <AppContext.Provider value={{ user, setUser, session, source, setSource, locations, setLocations, rentedCycle, setRentedCycle}}>
             {children}
         </AppContext.Provider>
     );

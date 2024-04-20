@@ -3,12 +3,12 @@ import img from '../assets/loginpageimg.gif';
 import { useNavigate } from 'react-router';
 import { useAppContext } from '../context/context';
 import { useEffect, useState } from 'react';
-import { getAvailableSlots } from '../database/database';
+import { getAvailableSlots, bookCycle} from '../database/database';
 
 
 function Booking() {
     const navigate = useNavigate();
-    const { source} = useAppContext();
+    const { source, user, rentedCycle, setRentedCycle} = useAppContext();
     const [destination, setDestination] = useState(null);
     const [availableSlotsInDest, setAvailableSlotsInDest] = useState(0);
     const [availableSlots, setAvailableSlots] = useState([]);
@@ -18,8 +18,14 @@ function Booking() {
     }
 
     function onPayement() {
-        //go to timer page
-        //book a cycle
+        
+        const id = user.id;
+        bookCycle(id,source, destination).then(
+            (data) => {
+                console.log('data', data);
+                setRentedCycle(data);
+                navigate('/timer');
+            });
     }
 
     useEffect(() => {
@@ -27,7 +33,7 @@ function Booking() {
             navigate('/');
         }
         getAvailableSlots().then((data) =>
-            setAvailableSlots(data.filter((location) => location.location_name !== source)));
+            {setAvailableSlots(data.filter((location) => location.location_name !== source));setDestination(availableSlots.location_name);});
 
     }, []);
 
@@ -40,6 +46,12 @@ function Booking() {
     function handleSubmit(event) {
         event.preventDefault();
         console.log('form data', source," to ",destination);
+        if(!destination)
+        {
+            alert('Select Destination');
+            return;
+        }
+        onPayement();
     }
 
 
@@ -62,7 +74,7 @@ function Booking() {
                 <label className={styles.amount}>COST : 40</label>
                 <div className={styles.paying}>
                     <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
-                    <button type='submit' className={styles.button1} onClick={onPayement}>Pay</button>
+                    <button type='submit' className={styles.button1}>Pay</button>
                 </div>
             </form>
 
