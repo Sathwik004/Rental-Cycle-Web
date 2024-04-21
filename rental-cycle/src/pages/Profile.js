@@ -38,7 +38,7 @@ function Profile() {
         }
         try {
             const { id } = user;
-            getUserTransactions(id).then((data) => {setTransactions(data);});
+            getUserTransactions(id).then((data) => {setTransactions(data);console.log(data);});
         } catch (error) {
             console.log('error in profile', error);
         }
@@ -61,8 +61,8 @@ function Profile() {
         },
         
         {
-            Header: "Return Time",
-            accessor: "returntime"
+            Header: "Duration",
+            accessor: "duration"
         },
         {
             Header: "Total Cost",
