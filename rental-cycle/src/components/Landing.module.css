@@ -1,63 +1,46 @@
-*{
-    text-decoration: none;
-    margin-top: 0;
-}
-
-.all{
-    padding-left: 60px;
-    padding-right: 60px;
-}
-
-
-.navbar{
-    color: white;
-    font-size: 50px;
-    font-weight: 900;
-    padding-left: 20px;
-    margin-top: 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo{
-    color: white;
-    font-family: 'Cooper Black';
-
-}
-
-.logo a{
-    color: white;
-    padding-top: 40px;
-}
-
-.link{
-    list-style: none;
-    font-size: 16px;
-    padding-right: 30px;
-    font-weight: 600px;
-
-}
-.link a{
-    color: white;
-    
-}
-.navbuttons{
-    display: flex;
-
-}
-
 :root{
     background-color: black;
 }
+.toppart{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
 
+}
+.title{
+    padding-left: 90px;
+    margin-top: 2%;
+    font-family: 'cooper black';
+    font-size: 60px;
+}
+
+.list1{
+    list-style: none;
+    display: flex;
+    margin-right: 7%;
+    gap: 100px;
+    margin-top: 3.5%;
+    font-size: 20px;
+    cursor: pointer; /* Change cursor to pointer */
+
+}
+
+.button3{
+    color: #3ED14D;
+
+}
+.midarea{
+    display: flex;
+    align-items: center;
+    max-height: 400px;
+}
 .para1{
     color: white;
     font-size: 50px;
     font-family: 'Cooper Black';
     font-weight: 1100;
     max-width:60%;
-    padding-top: 80px;
+    padding-top: 0px;
     padding-left: 60px;
 }
 
@@ -75,33 +58,8 @@
 
 .pagegif{
     padding-left: 20%;
-    width: 550px;
-    height: 350px;
+    height: 400px;
     padding-top: 1%;
     padding-right: 1%;
     background-image: url();
-}
-.midarea{
-    display: flex;
-    align-items: center;
-}
-
-
-.button1 {
-    width: 100px;
-    background-color: black;
-    color: white;
-    border: none;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-}
-.button2 {
-    width: 100px;
-    background-color: black;
-    color: #3ED14D;
-    border: none;
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
 }

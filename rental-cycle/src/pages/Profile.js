@@ -77,7 +77,7 @@ function Profile() {
         <>
             <header>
                 <nav className={styles.navdiv}>
-                    <div className={styles.title}>Cyclehub</div>
+                    <div className={styles.title} onClick={()=>navigate('/home')}>Cyclehub</div>
                     <div>
                         <button className={styles.navbutton} onClick={()=>navigate('/home')}>Home</button>
                         <button className={styles.navbutton} onClick={logout}><img src={img} className={styles.imgicon}></img>Logout</button>
