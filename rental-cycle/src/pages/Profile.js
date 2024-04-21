@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router';
 
 const data = [
     { "datetime": "23", "sou": "AB1", "des": "Student Plaza", "dur": "10:21 min", "amt": "₹40" },
-    { "datetime": "24", "sou": "AB2", "des": "Student Plaza", "dur": "10:21 min", "amt": "₹50" },
+    { "datetime": "24", "sou": "AB2", "des": "Student Plaza", "dur": "30:21 min", "amt": "₹50" },
     { "datetime": "25", "sou": "AB3", "des": "Student Plaza", "dur": "10:21 min", "amt": "₹60" },
     { "datetime": "26", "sou": "AB4", "des": "Student Plaza", "dur": "10:21 min", "amt": "₹70" },
     { "datetime": "27", "sou": "AB5", "des": "Student Plaza", "dur": "10:21 min", "amt": "₹80" },
@@ -46,28 +46,26 @@ function Profile() {
 
     }, [user]);
 
-
-    const data1 = React.useMemo(() => data, []);
     const col = React.useMemo(() => [
         {
-            Header: "Time Stamp",
-            accessor: "datetime"
-        },
-        {
             Header: "Source",
-            accessor: "sou"
+            accessor: "source"
         },
         {
             Header: "Destination",
-            accessor: "des"
+            accessor: "destination"
         },
         {
-            Header: "Duration",
-            accessor: "dur"
+            Header: "Rental Time",
+            accessor: "rentaltime"
         },
         {
-            Header: "Amount",
-            accessor: "amt"
+            Header: "Return Time",
+            accessor: "returntime"
+        },
+        {
+            Header: "Total Cost",
+            accessor: "totalcost"
         },
     ],
         []

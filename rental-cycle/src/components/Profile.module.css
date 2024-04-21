@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Radio+Canada+Font&display=swap');
-
+*{
+    color: white;
+}
 .navdiv{
 
     z-index: 999;
