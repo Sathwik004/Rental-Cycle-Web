@@ -5,7 +5,7 @@ function AboutUs() {
     return (
         <div>
             <div className={styles.container1}>
-                <h1>About CycleHub</h1>
+                <h2>About CycleHub</h2>
                 <p className={styles.text}>Welcome to CycleHub, your campus solution for sustainable transportation!</p>
                 {/* Add your image here */}
             </div>

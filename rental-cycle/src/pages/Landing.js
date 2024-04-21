@@ -1,7 +1,7 @@
 import styles from '../components/Landing.module.css';
 import React from 'react';
 import gif from '../assets/Ride a bicycle.gif';
-import Timer from './timer';
+import { useNavigate } from 'react-router';
 
 
 function Landing() {
@@ -14,6 +14,8 @@ function Landing() {
     function aboutUs() {
         window.location.href = '/about';
     }
+    const navigate = useNavigate();
+
     return (
         <div>
 

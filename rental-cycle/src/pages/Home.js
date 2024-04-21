@@ -58,7 +58,7 @@ function Home() {
             }
 
             <footer>
-                <div>About us</div>
+                <div onClick={()=>navigate('/about')}>About us</div>
                 <div>Terms and Condition</div>
                 <div>Help</div>
             </footer>
