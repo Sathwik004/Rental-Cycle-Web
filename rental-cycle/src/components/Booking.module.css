@@ -5,20 +5,27 @@
     height: 800px;
 
 }
-.ball1{
-    width: 250px;
-    position: fixed;
-    top: 16%;
+.ball1 {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
     left: 75%;
-    z-index: 0;
-    
 }
+  
 .ball2{
     width: 150px;
-    top: 80%;
-    left: 30px;
+    top: 85%;
+    left: -10px;
     position: fixed;
     z-index:0;
+}
+.wholething{
+    width: 80%;
+    display: flex;
+    align-items: center;
 }
 .img{
     background-color: rgb(107, 191, 89, 0);
@@ -32,13 +39,16 @@
     font-family: 'Cooper Black';
     font-size: 60px;
     font-weight: 300;
-    padding: 20px;
+    padding-left: 20px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-shadow: -2px -2px 0  black,  
+                  2px -2px 0 black,
+                 -2px  2px 0 #fff,
+                  2px  2px 0 #fff;
+    transform: perspective(800px);
 }
-.wholething{
-    display: flex;
-    width: 80%;
-    align-items: center;
-}
+
 .selection{
     display: flex;
     flex-direction: row;
@@ -52,7 +62,8 @@
     width:320px;
     font-size: 18px;
     margin: 10px;
-    padding: 20px;    
+    padding: 20px; 
+       
 }
 .selection1{
     font-size: 18px;
@@ -73,41 +84,42 @@
 }
 .box{
     display: flex;
-    margin-bottom: 150px;
+    margin-bottom: 50px;
+    margin-top: 10px;
 
  }
  .amount{
     color: white;
     display: flex;
-    font-size: 20px;
+    padding-left: 0px;
 
  }
- .buttoncontainer
- {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    flex-direction: column;
- }
- .button1{
-    height: 60px;
+
+ .button1 {
+    height: 65px;
     width: 350px;
     min-width: 200px;
-    border: none;
     color: white;
-    background-color: #08A045;
     border-radius: 10px;
     font-size: 24px;
-    
- }
- .button2{
-    height: 60px;
+    border: 1px solid rgba(146, 255, 68, 0.2);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(to bottom right, rgba(61, 249, 28, 0.75) 0%, rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+    margin-bottom: 0; /* Add this line to remove bottom margin */
+}
+
+.button2 {
+    height: 65px;
     width: 350px;
     min-width: 200px;
     color: white;
-    border: none;
     background-color: #263238;
     border-radius: 10px;
     font-size: 24px;
-
- }
+    border: 1px solid rgba(161, 196, 154, 0.25);
+    backdrop-filter: blur(15px);
+    background: linear-gradient(to bottom right, rgba(161, 196, 154, 0.75) 20%, rgba(255, 255, 255, 0));
+    -webkit-backdrop-filter: blur(10px);
+    margin: none;
+}

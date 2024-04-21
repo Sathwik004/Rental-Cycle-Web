@@ -1,7 +1,7 @@
 .ball1{
     width: 250px;
     position: fixed;
-    top: 16%;
+    top: 17%;
     left: 75%;
     z-index: 0;
     
@@ -9,7 +9,7 @@
 .ball2{
     width: 150px;
     top: 80%;
-    left: 30px;
+    left: -30px;
     position: fixed;
     z-index:0;
 }
@@ -160,7 +160,7 @@
     font-size: 36px;
     color: white;
     font-family: 'Cooper Black';
-    margin-top: 40px;
+    margin-top: 15px;
     text-shadow: #303030;
     border: black;
 }
@@ -222,34 +222,32 @@ footer{
     align-items: start;
     
 }
-
+.p{
+    margin-bottom: 5px;
+}
 .bookbutton{
-    margin: 15px;
+    margin: auto;
     position: absolute;
     bottom: 10px;
     right: 10px;
     display: flex;
-    width: 80px;
+    width: 100px;
     height: 40px;
     justify-content: center;
     align-items: center;
     padding: 5px;
     background-color: #08A045;
     color: white;
-    font-weight: bold;
     border: none;
     border-radius: 10px;
+    font-size: 15px;
 }
 
 .cardstarts{
     display: flex;
     flex-wrap: wrap;
     overflow-x: auto;
+    color: red;
+
 }
 
-.cardcontainer{
-    display: flex;
-    justify-content: center;
-    
-    
-}
