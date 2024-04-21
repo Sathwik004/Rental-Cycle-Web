@@ -18,9 +18,9 @@ function Landing() {
         <div>
             <header className={styles.all}>
                 <nav className={styles.navbar}>
-                    <div className={styles.navdiv}>
-                        <div className={styles.logo}><a href=" ">Cyclehub</a></div>
-                        <ul>
+                    <div className={styles.logo}><a href=" ">Cyclehub</a></div>
+                        
+                        <ul className={styles.navbuttons}>
                             <li className={styles.link}>
                                 <button className={styles.button1} onClick={aboutUs}>About Us</button>
                             </li>
@@ -31,7 +31,6 @@ function Landing() {
                                 <button className={styles.button2} onClick={signUp}>Sign Up</button>
                             </li>
                         </ul>
-                    </div>
                 </nav>
             </header>
             <div className={styles.midarea}>

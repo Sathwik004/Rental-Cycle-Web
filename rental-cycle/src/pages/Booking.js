@@ -1,14 +1,15 @@
 import styles from '../components/Booking.module.css';
-import img from '../assets/loginpageimg.gif';
 import { useNavigate } from 'react-router';
 import { useAppContext } from '../context/context';
 import { useEffect, useState } from 'react';
-import { getAvailableSlots, bookCycle} from '../database/database';
+import { getAvailableSlots, bookCycle } from '../database/database';
+
+import ballimg from '../assets/homeball1.jpg';
 
 
 function Booking() {
     const navigate = useNavigate();
-    const { source, user, rentedCycle, setRentedCycle} = useAppContext();
+    const {source, user, rentedCycle, setRentedCycle } = useAppContext();
     const [destination, setDestination] = useState(null);
     const [availableSlotsInDest, setAvailableSlotsInDest] = useState(0);
     const [availableSlots, setAvailableSlots] = useState([]);
@@ -18,9 +19,9 @@ function Booking() {
     }
 
     function onPayement() {
-        
+
         const id = user.id;
-        bookCycle(id,source, destination).then(
+        bookCycle(id, source, destination).then(
             (data) => {
                 console.log('data', data);
                 setRentedCycle(data);
@@ -32,8 +33,7 @@ function Booking() {
         if (source === null) {
             navigate('/');
         }
-        getAvailableSlots().then((data) =>
-            {setAvailableSlots(data.filter((location) => location.location_name !== source));setDestination(availableSlots.location_name);});
+        getAvailableSlots().then((data) => { setAvailableSlots(data.filter((location) => location.location_name !== source)); setDestination(availableSlots.location_name); });
 
     }, []);
 
@@ -45,9 +45,8 @@ function Booking() {
 
     function handleSubmit(event) {
         event.preventDefault();
-        console.log('form data', source," to ",destination);
-        if(!destination)
-        {
+        console.log('form data', source, " to ", destination);
+        if (!destination) {
             alert('Select Destination');
             return;
         }
@@ -59,12 +58,8 @@ function Booking() {
 
     return (
         <div className={styles.wholething}>
-            <div className={styles.leftside}>
-                <div className={styles.imgback}>
-                    <img src={img} className={styles.img}></img>
-                </div>
-            </div>
-
+            <img src={ballimg} className={styles.ball1}></img>
+            <img src={ballimg} className={styles.ball2}></img>
             <form className={styles.right} onSubmit={handleSubmit}>
                 <label className={styles.title}>Booking Page </label>
                 <select className={styles.selection} onChange={(e) => setDestination(e.target.value)}>
@@ -72,12 +67,14 @@ function Booking() {
                         <option className={styles.selection1}>{item.location_name}</option>
                     ))}
                 </select>
-                <label className={styles.amount}>{destination?`${availableSlotsInDest} slots available at ${destination}` : 'Select Destination'  }</label>
-                <label className={styles.amount}>COST : 40</label>
-                <div className={styles.paying}>
-                    <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
-                    <button type='submit' className={styles.button1}>Pay</button>
+                <label className={styles.box}>{destination ? `${availableSlotsInDest} slots available at ${destination}` : 'Select Destination'}</label>
+                <label className={styles.amount}><p>Total cost </p><p> ₹40.00</p></label>
+                <div className={styles.buttoncontainer}>
+                <button type='submit' className={styles.button1}>Pay</button>
+                <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
                 </div>
+                
+
             </form>
 
         </div>

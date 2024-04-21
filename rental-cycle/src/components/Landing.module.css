@@ -15,6 +15,9 @@
     font-weight: 900;
     padding-left: 20px;
     margin-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
@@ -30,9 +33,7 @@
 
 .link{
     list-style: none;
-    display: inline-block;
     font-size: 16px;
-    justify-content: space-between;
     padding-right: 30px;
     font-weight: 600px;
 
@@ -41,21 +42,13 @@
     color: white;
     
 }
-
-.navdiv{
+.navbuttons{
     display: flex;
-    color: white;
-    align-items: center;
-    font-family: inter;
-    justify-content: space-between;
-}
 
+}
 
 :root{
     background-color: black;
-}
-.link1{
-    color: green;
 }
 
 .para1{
@@ -92,16 +85,10 @@
     display: flex;
     align-items: center;
 }
-.button1{
-    background-color: black;
-    color: white;
-    border-width: 0px;
-    font-size: 16px;
-    font-weight: 600px;
-    font-family: 'lucida fax';
-}
+
 
 .button1 {
+    width: 100px;
     background-color: black;
     color: white;
     border: none;
@@ -110,6 +97,7 @@
     font-size: 16px;
 }
 .button2 {
+    width: 100px;
     background-color: black;
     color: #3ED14D;
     border: none;

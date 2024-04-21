@@ -1,9 +1,9 @@
 .ball1{
     width: 250px;
     position: fixed;
-    top: 15%;
+    top: 16%;
     left: 75%;
-    z-index: -3;
+    z-index: 0;
     
 }
 .ball2{
@@ -11,10 +11,10 @@
     top: 80%;
     left: 30px;
     position: fixed;
-    z-index:-3;
+    z-index:0;
 }
 .pagefront{
-    z-index: 5;
+    z-index: 1;
 }
 .cardstarts{
     padding-top: 60px;
@@ -146,12 +146,14 @@
     display: inline-flex;
     height: 400px;
     margin-top: 150px;
+    z-index: 1;
 }
 .midimg{
     width: 60vh;
     height: 60vh;
     border-radius: 30px;
     margin-left: 6%;
+    z-index: 1;
 }
 .para1{
     padding-top: 10px;
