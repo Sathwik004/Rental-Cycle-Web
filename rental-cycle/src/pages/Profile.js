@@ -32,13 +32,13 @@ function Profile() {
         try {
             const { id } = user;
             console.log(id);
-            getUserDetails(id).then((data) => setUserDetails(data[0])).then(() => console.log('In profile',userDetails));
+            getUserDetails(id).then((data) => setUserDetails(data[0]));
         } catch (error) {
             console.log('error in profile', error);
         }
         try {
             const { id } = user;
-            getUserTransactions(id).then((data) => {console.log(data);setTransactions(data);});
+            getUserTransactions(id).then((data) => {setTransactions(data);});
         } catch (error) {
             console.log('error in profile', error);
         }
@@ -48,6 +48,10 @@ function Profile() {
 
     const col = React.useMemo(() => [
         {
+            Header: "Rental Time",
+            accessor: "rentaltime"
+        },
+        {
             Header: "Source",
             accessor: "source"
         },
@@ -55,10 +59,7 @@ function Profile() {
             Header: "Destination",
             accessor: "destination"
         },
-        {
-            Header: "Rental Time",
-            accessor: "rentaltime"
-        },
+        
         {
             Header: "Return Time",
             accessor: "returntime"
