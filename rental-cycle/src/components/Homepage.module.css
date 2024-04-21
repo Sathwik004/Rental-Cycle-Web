@@ -1,11 +1,26 @@
-.slick-slide > div {
-    margin: 0px 20px;
-  }
+.ball1{
+    width: 250px;
+    position: fixed;
+    top: 15%;
+    left: 75%;
+    z-index: -3;
+    
+}
+.ball2{
+    width: 150px;
+    top: 80%;
+    left: 30px;
+    position: fixed;
+    z-index:-3;
+}
+.pagefront{
+    z-index: 5;
+}
 .cardstarts{
-    width: 80%;
-    margin: auto;
     padding-top: 60px;
     padding-bottom: 100px;
+    margin-left: 58px;
+    margin-right: 50px;
 }
 
 .card_item{
@@ -56,7 +71,7 @@
 .navdiv{
     position: fixed;
     background-color: black;
-    z-index: 999;
+    z-index: 10;
     color: white;
     display: flex;
     font-size: 50px;
@@ -120,12 +135,15 @@
 .wordcolor{
     font-size: 36px;
     color: #3ED14D;
+    text-shadow: -1px -1px 0  black,  
+                  1px -1px 0 black,
+                 -1px  1px 0 #fff,
+                  1px  1px 0 #fff;
 }
 
 .body{
     color: white;
     display: inline-flex;
-    justify-content: space-around;
     height: 400px;
     margin-top: 150px;
 }
@@ -133,12 +151,16 @@
     width: 60vh;
     height: 60vh;
     border-radius: 30px;
+    margin-left: 6%;
 }
 .para1{
-    padding-top: 70px;
+    padding-top: 10px;
     font-size: 36px;
-    color: darkgray;
+    color: white;
     font-family: 'Cooper Black';
+    margin-top: 40px;
+    text-shadow: #303030;
+    border: black;
 }
 .para2{
     color: white;
@@ -147,11 +169,26 @@
     padding-left: 400px;
     position: flex;
     padding-top: 50px;
+    text-shadow: -1px -1px 0  black,  
+                  1px -1px 0 black,
+                 -1px  1px 0 #fff,
+                  1px  1px 0 #fff;
 
 }
 
 .whole{
+    margin-left: 6%;
+    margin-top: 50px;
     width: 50%;
+    background-color: rgba(83,102,79,0.3);
+    height: 230px;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3), inset 0px 0px 10px rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px); /* Adjust the blur value as needed */
+    background: linear-gradient(to bottom right, rgba(157, 211, 148, 0.25) 20%, rgba(255, 255, 255, 0)); 
+    -webkit-backdrop-filter: blur(10px);
 }
 footer{
     color: white;

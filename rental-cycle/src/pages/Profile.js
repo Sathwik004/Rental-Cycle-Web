@@ -51,19 +51,23 @@ function Profile() {
     const col = React.useMemo(() => [
         {
             Header: "Time Stamp",
-            accessor: "rentaltime"
+            accessor: "datetime"
         },
         {
             Header: "Source",
-            accessor: "source"
+            accessor: "sou"
         },
         {
             Header: "Destination",
-            accessor: "destination"
+            accessor: "des"
+        },
+        {
+            Header: "Duration",
+            accessor: "dur"
         },
         {
             Header: "Amount",
-            accessor: "totalcost"
+            accessor: "amt"
         },
     ],
         []
@@ -107,8 +111,8 @@ function Profile() {
                     <thead className={styles.tabletitle}>
                         {headerGroups.map((headerGroup) => (
                             <tr {...headerGroup.getHeaderGroupProps()}>
-                                {headerGroup.headers.map((col) => (
-                                    <th {...col.getHeaderProps()}>
+                                {headerGroup.headers.map((col, index) => (
+                                    <th key={index} {...col.getHeaderProps()}>
                                         {col.render("Header")}
                                     </th>
                                 ))}
@@ -116,20 +120,30 @@ function Profile() {
                         ))}
                     </thead>
                     <tbody {...getTableBodyProps()}>
-                        {data.map((row) => {
-                            prepareRow(row)
+                        {rows.map((row, rowIndex) => {
+                            prepareRow(row);
                             return (
-                                <tr {...row.getRowProps()}>
-                                    {row.cells.map((cell) => (
-                                        <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
-                                    ))}
-
+                                <tr key={rowIndex} {...row.getRowProps()}>
+                                    {row.cells.map((cell, cellIndex) => {
+                                        const value = cell.value;
+                                        let cellClassName = '';
+                                        
+                                        if (cellIndex === 3) {
+                                            cellClassName = parseFloat(value) < 11 ? styles.greenColumn : styles.redColumn;
+                                        }
+                                        
+                                        return (
+                                            <td key={cellIndex} {...cell.getCellProps()} className={cellClassName}>
+                                                {cell.render("Cell")}
+                                            </td>
+                                        );
+                                    })}
                                 </tr>
-                            )
+                            );
                         })}
-
                     </tbody>
                 </table>
+
 
             </div>
 

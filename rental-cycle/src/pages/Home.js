@@ -1,7 +1,8 @@
 import styles from '../components/Homepage.module.css';
 import React, { useState, useEffect } from 'react';
 import img from '../assets/logout.jpg';
-import img1 from '../assets/homepageimg.jpg'
+import img1 from '../assets/homepageimg.jpg';
+import ballimg from '../assets/homeball1.jpg'
 import supabase from '../database/client';
 import {getAvailableBicycles, logout} from '../database/database';
 import Card from '../components/card';
@@ -28,6 +29,11 @@ function Home() {
 
     return (
         <div>
+            <div className={styles.pageback}>
+            <img src={ballimg} className={styles.ball1}></img>
+            <img src={ballimg} className={styles.ball2}></img>
+            </div>
+            <div className={styles.pagefront}>
             <header>
                 <nav className={styles.navdiv}>
                     <div className={styles.title}>Cyclehub</div>
@@ -60,6 +66,7 @@ function Home() {
                 <div>Terms and Condition</div>
                 <div>Help</div>
             </footer>
+        </div>
         </div>
     );
 }
