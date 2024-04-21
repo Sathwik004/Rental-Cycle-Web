@@ -7,9 +7,10 @@ import {getAvailableBicycles, logout} from '../database/database';
 import Card from '../components/card';
 import { useNavigate } from 'react-router';
 import { useAppContext } from '../context/context';
+import Timer from './timer';
 
 function Home() {
-    const { source, setSource,locations,setLocations } = useAppContext();
+    const { source, setSource,locations,setLocations, rentedCycle } = useAppContext();
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -44,16 +45,15 @@ function Home() {
                     <p className={styles.para1}><span className={styles.wordcolor}>Skip</span> the hassle of owning and maintaining a bike.  <span className={styles.wordcolor}>Rent one </span>whenever you need it!</p>
                 </div>
             </div>
+            {rentedCycle ? (<Timer/>):
+            <><p className={styles.para2}>Book Your Cycle Now</p><div className={styles.cardcontainer}>
+                    <div className={styles.cardstarts}>
 
-            <p className={styles.para2}>Book Your Cycle Now</p>
+                        {locations.map((item) => <Card key={item.id} location_name={item.location_name} lot_count={item.lot_count} handleBooking={handleBooking} />)}
 
-            <div className={styles.cardcontainer}>
-                <div className={styles.cardstarts}>
-
-                    {locations.map((item) => <Card key={item.id} location_name={item.location_name} lot_count={item.lot_count} handleBooking={handleBooking} />)}
-
-                </div>
-            </div>
+                    </div>
+                </div></>
+            }
 
             <footer>
                 <div>About us</div>

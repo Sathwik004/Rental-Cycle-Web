@@ -2,7 +2,7 @@ import styles from '../components/Profile.module.css';
 import React, { PureComponent, useEffect, useState } from 'react';
 import img from '../assets/logout.jpg';
 import { useTable } from 'react-table';
-import { getUserDetails, logout } from '../database/database';
+import { getUserDetails, getUserTransactions, logout } from '../database/database';
 import { useAppContext } from '../context/context';
 import { useNavigate } from 'react-router';
 
@@ -22,11 +22,13 @@ const data = [
 
 function Profile() {
     const [userDetails, setUserDetails] = useState({});
+    const [transactions, setTransactions] = useState([]);
     const { user } = useAppContext();
     const navigate = useNavigate();
 
     
     useEffect(() => {
+        
         try {
             const { id } = user;
             console.log(id);
@@ -34,38 +36,40 @@ function Profile() {
         } catch (error) {
             console.log('error in profile', error);
         }
+        try {
+            const { id } = user;
+            getUserTransactions(id).then((data) => {console.log(data);setTransactions(data);});
+        } catch (error) {
+            console.log('error in profile', error);
+        }
 
 
-    }, []);
+    }, [user]);
 
 
     const data1 = React.useMemo(() => data, []);
     const col = React.useMemo(() => [
         {
             Header: "Time Stamp",
-            accessor: "datetime"
+            accessor: "rentaltime"
         },
         {
             Header: "Source",
-            accessor: "sou"
+            accessor: "source"
         },
         {
             Header: "Destination",
-            accessor: "des"
-        },
-        {
-            Header: "Duration",
-            accessor: "dur"
+            accessor: "destination"
         },
         {
             Header: "Amount",
-            accessor: "amt"
+            accessor: "totalcost"
         },
     ],
         []
     );
 
-    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns: col, data: data1 });
+    const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns: col, data: transactions });
     return (
         <>
             <header>
@@ -112,7 +116,7 @@ function Profile() {
                         ))}
                     </thead>
                     <tbody {...getTableBodyProps()}>
-                        {rows.map((row) => {
+                        {data.map((row) => {
                             prepareRow(row)
                             return (
                                 <tr {...row.getRowProps()}>

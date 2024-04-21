@@ -34,6 +34,20 @@ export async function bookCycle(uid, source_name, destination_name) {
     return data;
 }
 
+export async function returnCycle(lot_id, duration) {
+    // let { data, error } = await supabase.rpc('cycle_return', {
+    //     lot_id,
+    //     duration
+    // });
+
+    // if (error) {
+    //     console.error(error);
+    //     return null;
+    // }
+    // return data;
+    return {};
+}
+
 export async function getUserDetails(uid) {
     let { data, error } = await supabase.rpc('get_user_data', {
         uid
@@ -44,8 +58,18 @@ export async function getUserDetails(uid) {
         return null;
     }
     return data;
+}
 
+export async function getUserTransactions(uid) {
+    let { data, error } = await supabase.rpc('get_user_trans_data', {
+        uid
+    });
 
+    if (error) {
+        console.error(error);
+        return null;
+    }
+    return data;
 }
 
 export async function logout() {

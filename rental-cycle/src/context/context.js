@@ -8,7 +8,7 @@ const AppContextProvider = ({ children }) => {
     const [session, setSession] = useState(null);
     const [source, setSource] = useState(null);
     const [locations, setLocations] = useState([]);
-    const [rentedCycle, setRentedCycle] = useState({});
+    const [rentedCycle, setRentedCycle] = useState(null);
 
 
 

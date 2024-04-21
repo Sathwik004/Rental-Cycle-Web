@@ -24,7 +24,7 @@ function Booking() {
             (data) => {
                 console.log('data', data);
                 setRentedCycle(data);
-                navigate('/timer');
+                navigate('/home');
             });
     }
 
@@ -51,6 +51,8 @@ function Booking() {
             alert('Select Destination');
             return;
         }
+        localStorage.setItem('time', 300);
+
         onPayement();
     }
 

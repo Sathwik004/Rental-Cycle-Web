@@ -26,7 +26,6 @@ function Content()
         <Route path="/signup" element={<SignUp />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/profile" element={<Profile />} />
-        <Route path="/Timer" element={<Timer />} />
 
         <Route path='*' element={<NoPage />} />
       </Routes>
