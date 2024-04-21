@@ -34,18 +34,17 @@ export async function bookCycle(uid, source_name, destination_name) {
     return data;
 }
 
-export async function returnCycle(lot_id, duration) {
-    // let { data, error } = await supabase.rpc('cycle_return', {
-    //     lot_id,
-    //     duration
-    // });
+export async function returnCycle(d_lotid, duration) {
+    let { data, error } = await supabase.rpc('cycle_return', {
+        d_lotid,
+        duration
+    });
 
-    // if (error) {
-    //     console.error(error);
-    //     return null;
-    // }
-    // return data;
-    return {};
+    if (error) {
+        console.error(error);
+        return null;
+    }
+    return data;
 }
 
 export async function getUserDetails(uid) {
