@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 
 import { Fragment, } from 'react';
 import { AppContextProvider, useAppContext } from './context/context';
+import AboutUs from './pages/Aboutus';
 
 function Content()
 {
@@ -25,6 +26,8 @@ function Content()
         <Route path="/signup" element={<SignUp />} />
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/about" element={<AboutUs />} />
+
 
         <Route path='*' element={<NoPage />} />
       </Routes>

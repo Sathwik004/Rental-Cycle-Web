@@ -9,7 +9,7 @@
 .ball2{
     width: 150px;
     top: 80%;
-    left: -30px;
+    left: 30px;
     position: fixed;
     z-index:-3;
 }

@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: black;
+    color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.container1,.container2,.container3,.container4,.container5{
+    max-width: 960px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #303030;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3), inset 0px 0px 10px rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(15px); /* Adjust the blur value as needed */
+    background: linear-gradient(to bottom right, rgba(157, 211, 148, 0.25) 20%, rgba(255, 255, 255, 0)); 
+    -webkit-backdrop-filter: blur(10px);
+}
+
+h1,h2,h3{
+    color: #3ED14D;
+    font-family: 'cooper black', sans-serif;
+    padding-left: 20px;
+}
+        
+p {
+    margin-bottom: 20px;
+    font-size: medium;
+    padding-left: 20px;
+}
+
+.text{
+    font-size: medium;
+}
+
+.link1{
+    color: rgb(27, 127, 241)
+}
