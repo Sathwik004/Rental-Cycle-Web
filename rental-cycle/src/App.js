@@ -6,6 +6,7 @@ import NoPage from './pages/NoPage';
 import SignUp from './pages/signUp';
 import BookingPage from './pages/Booking';
 import Profile from './pages/Profile';
+import Timer from './pages/timer';
 
 import { Fragment, } from 'react';
 import { AppContextProvider, useAppContext } from './context/context';
@@ -28,6 +29,7 @@ function Content()
         <Route path="/profile" element={<Profile />} />
         <Route path="/about" element={<AboutUs />} />
 
+        <Route path="/Timer" element={<Timer />} />
 
         <Route path='*' element={<NoPage />} />
       </Routes>
