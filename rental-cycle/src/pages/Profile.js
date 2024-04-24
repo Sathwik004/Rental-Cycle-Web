@@ -24,7 +24,7 @@ function Profile() {
         }
         try {
             const { id } = user;
-            getUserTransactions(id).then((data) => {setTransactions(data);});
+            getUserTransactions(id).then((data) => {setTransactions(data);console.log(data);});
         } catch (error) {
             console.log('error in profile', error);
         }
@@ -47,8 +47,8 @@ function Profile() {
         },
         
         {
-            Header: "Return Time",
-            accessor: "returntime"
+            Header: "Duration",
+            accessor: "duration"
         },
         {
             Header: "Total Cost",
@@ -114,7 +114,15 @@ function Profile() {
                                         let cellClassName = '';
                                         
                                         if (cellIndex === 3) {
-                                            cellClassName = parseFloat(value) < 11 ? styles.greenColumn : styles.redColumn;
+                                            const minutes = Math.floor(parseFloat(value) / 60);
+                                            const seconds = parseFloat(value) % 60;
+                                            const formattedValue = `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+                                            cellClassName = parseFloat(value) < 20 ? styles.greenColumn : styles.redColumn;
+                                            return (
+                                                <td key={cellIndex} {...cell.getCellProps()} className={cellClassName}>
+                                                    {formattedValue}
+                                                </td>
+                                            );
                                         }
                                         
                                         return (

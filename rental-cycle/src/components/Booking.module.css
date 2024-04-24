@@ -1,17 +1,7 @@
-.imgback{
-    background-color: rgb(107, 191, 89);
-    margin-right: 0%;
-    width: 600px;
-    height: 800px;
-
-}
-.ball1 {
-    width: 200px;
-    height: 200px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
-    top: 0;
+.ball1{
+    width: 250px;
+    position: fixed;
+    top: 5%;
     left: 75%;
 }
   
@@ -22,31 +12,13 @@
     position: fixed;
     z-index:0;
 }
-.wholething{
-    width: 80%;
-    display: flex;
-    align-items: center;
-}
-.img{
-    background-color: rgb(107, 191, 89, 0);
-    width: 400px;
-    height: 400px;
-    padding-left: 80px;
-    padding-top: 40%;
-}
 .title{
     color: white;
     font-family: 'Cooper Black';
     font-size: 60px;
     font-weight: 300;
-    padding-left: 20px;
-    margin-top: 50px;
-    margin-bottom: 40px;
-    text-shadow: -2px -2px 0  black,  
-                  2px -2px 0 black,
-                 -2px  2px 0 #fff,
-                  2px  2px 0 #fff;
-    transform: perspective(800px);
+    padding: 20px;
+    margin-top: 40px;
 }
 
 .selection{
@@ -61,13 +33,15 @@
     border-width: 2px;
     width:320px;
     font-size: 18px;
-    margin: 10px;
+    margin-bottom: 10px;
     padding: 20px; 
        
 }
 .selection1{
     font-size: 18px;
     padding-top: 10px;
+    padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .right{
@@ -76,16 +50,9 @@
     align-items: center;
 }
 
-
-.password{
-    color: white;
-    margin-left: 21%;
-    padding-bottom: 40px;
-}
 .box{
     display: flex;
-    margin-bottom: 50px;
-    margin-top: 10px;
+    margin-bottom: 100px;
 
  }
  .amount{
@@ -94,11 +61,12 @@
     padding-left: 0px;
 
  }
-
- .button1 {
-    height: 65px;
+ .button1{
+    height: 60px;
     width: 350px;
     min-width: 200px;
+    margin: 10px;
+    border: none;
     color: white;
     border-radius: 10px;
     font-size: 24px;
@@ -113,6 +81,7 @@
     height: 65px;
     width: 350px;
     min-width: 200px;
+    margin: 10px;
     color: white;
     background-color: #263238;
     border-radius: 10px;

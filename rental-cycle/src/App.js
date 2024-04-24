@@ -37,6 +37,7 @@ function Content()
         <Route index element={<Landing />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
     </Router>

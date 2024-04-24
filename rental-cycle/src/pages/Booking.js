@@ -57,7 +57,7 @@ function Booking() {
 
 
     return (
-        <div className={styles.wholething}>
+        <>
             <img src={ballimg} className={styles.ball1}></img>
             <img src={ballimg} className={styles.ball2}></img>
             <form className={styles.right} onSubmit={handleSubmit}>
@@ -68,15 +68,12 @@ function Booking() {
                     ))}
                 </select>
                 <label className={styles.box}>{destination ? `${availableSlotsInDest} slots available at ${destination}` : 'Select Destination'}</label>
-                <label className={styles.amount}>Total cost ₹40.00</label>
+                <label className={styles.amount}><p>Total cost </p><p> ₹40.00</p></label>
                 <button type='submit' className={styles.button1}>Pay</button>
                 <button type='button' className={styles.button2} onClick={cancel}>Cancel</button>
-                
-                
-
             </form>
 
-        </div>
+        </>
     )
 }
 

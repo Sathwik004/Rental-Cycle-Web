@@ -1,20 +1,19 @@
 import styles from '../components/Landing.module.css';
 import React from 'react';
 import gif from '../assets/Ride a bicycle.gif';
-import { useNavigate } from 'react-router';
-
+import {useNavigate} from 'react-router-dom';
 
 function Landing() {
+    const navigate = useNavigate();
     function signIn() {
-        window.location.href = '/login';
+        navigate('/login');
     }
     function signUp() {
-        window.location.href = '/signup';
+        navigate('/signup');
     }
     function aboutUs() {
-        window.location.href = '/about';
+        navigate('/about');
     }
-    const navigate = useNavigate();
 
     return (
         <div>
