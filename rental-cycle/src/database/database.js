@@ -1,4 +1,5 @@
 import supabase from './client.js';
+import { useNavigate } from 'react-router-dom';
 
 export async function getAvailableBicycles() {
 
@@ -76,5 +77,6 @@ export async function logout() {
         if (error) {
             console.log('error in logout', error);
         }
+        window.location.href = '/';
     });
 }
