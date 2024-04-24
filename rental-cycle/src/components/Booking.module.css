@@ -1,0 +1,90 @@
+.ball1{
+    width: 250px;
+    position: fixed;
+    top: 16%;
+    left: 75%;
+    z-index: 0;
+    
+}
+.ball2{
+    width: 150px;
+    top: 80%;
+    left: 30px;
+    position: fixed;
+    z-index:0;
+}
+.title{
+    color: white;
+    font-family: 'Cooper Black';
+    font-size: 60px;
+    font-weight: 300;
+    padding: 20px;
+    margin-top: 80px;
+}
+.selection{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color:black;
+    color: white;
+    border-radius: 10px;
+    border-color: white;
+    border-width: 2px;
+    width:320px;
+    font-size: 18px;
+    margin: 10px;
+    padding: 20px;    
+}
+.selection1{
+    font-size: 18px;
+    padding-top: 10px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.password{
+    color: white;
+    margin-left: 21%;
+    padding-bottom: 40px;
+}
+.box{
+    display: flex;
+    margin-bottom: 100px;
+
+ }
+ .amount{
+    color: white;
+    display: flex;
+    font-size: 20px;
+
+ }
+ .button1{
+    height: 60px;
+    width: 350px;
+    min-width: 200px;
+    margin: 10px;
+    border: none;
+    color: white;
+    background-color: #08A045;
+    border-radius: 10px;
+    font-size: 24px;
+    
+ }
+ .button2{
+    height: 60px;
+    width: 350px;
+    min-width: 200px;
+    margin: 10px;
+    color: white;
+    border: none;
+    background-color: #263238;
+    border-radius: 10px;
+    font-size: 24px;
+
+ }

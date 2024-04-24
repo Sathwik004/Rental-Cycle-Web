@@ -1,0 +1,55 @@
+.box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 60px;
+    position: relative;
+    z-index: 1;
+    
+}
+.timer{
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+h1{
+    font-size: 180px;
+}
+h2{
+    color: white;
+}
+.progresscontainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+progress{
+    height: 50px;
+    width: 80%;
+    background-color: black;
+    margin: 40px;
+    border-radius: 30px;
+}
+progress::-webkit-progress-value{
+    background-color: #3ED14D;
+    border-radius: 30px;
+}
+progress::-webkit-progress-bar{
+    background-color: #303030;
+    border-radius: 30px;
+}
+
+button{
+    margin: 30px 30vw;
+    height: 10vh;
+    background-color: #08A045;
+    color: white;
+    border-radius: 30px;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+}
