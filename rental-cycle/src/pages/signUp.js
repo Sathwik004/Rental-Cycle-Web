@@ -51,6 +51,7 @@ function SignUp() {
             const { user: { id } } = data;
             console.log('user in login', id);
             const { data: msg, error: err } = await supabase.from('Profiles').insert([{ userid: id, name: name, balance: 2000 }]);
+            navigate('/home');
             if (err) {
                 console.log('error', err.message);
                 return;
