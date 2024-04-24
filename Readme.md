@@ -5,11 +5,9 @@ Welcome to the Cycle Rental Systems web application! This application allows use
 ## TO DO
 
 
-- [ ] Develop a booking system for users to reserve bicycles
 - [ ] Design an admin panel for managing bicycles and user accounts
 - [ ] Implement a payment gateway for rental transactions
 - [ ] Add a rating and feedback system for users to provide reviews
-- [ ] Cleaner UI in booking page
 - [ ] Clean up initial assets and files
 
 - [x] Set up database schema and models
