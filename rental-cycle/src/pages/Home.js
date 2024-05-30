@@ -59,8 +59,8 @@ function Home() {
 
             <footer>
                 <div onClick={()=>{navigate('/about')}}>About us</div>
-                <div>Terms and Condition</div>
-                <div>Help</div>
+                <div onClick={()=>{navigate('/terms')}}>Terms and Condition</div>
+                <div onClick={()=>{navigate('/help')}}>Help</div>
             </footer>
         </div>
     );

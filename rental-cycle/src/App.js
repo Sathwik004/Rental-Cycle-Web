@@ -7,6 +7,8 @@ import SignUp from './pages/signUp';
 import BookingPage from './pages/Booking';
 import Profile from './pages/Profile';
 import AboutUs from './pages/Aboutus';
+import Help from './pages/Help';
+import TandC from './pages/Terms';
 
 import { Fragment, } from 'react';
 import { AppContextProvider, useAppContext } from './context/context';
@@ -25,6 +27,8 @@ function Content()
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/terms" element={<TandC />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
     </Router>
@@ -35,6 +39,8 @@ function Content()
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/terms" element={<TandC />} />
         <Route path='*' element={<NoPage />} />
       </Routes>
     </Router>
