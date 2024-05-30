@@ -10,7 +10,7 @@ function Help() {
                 <h3>How It Works</h3>
                 <p className={styles.text}>To start using CycleHub, simply go to our website, sign up for an account, and find a bike near you. Scan the QR code on the bike to unlock it, and you're ready to go! When you're done, just lock the bike and end your ride in the app.</p>
                 <h3>Contact Us</h3>
-                <p className={styles.text}>If you have any questions or need assistance, please don't hesitate to contact us at <a href="mailto:support@cyclehub.com">support@cyclehub.com</a>. We're here to help!</p>               
+                <p className={styles.text}>If you have any questions or need assistance, please don't hesitate to contact us at <a href="mailto:support@cyclehub.com"><span className={styles.link1}>support@cyclehub.com</span></a>. We're here to help!</p>               
             </div>
         </div>
     );
