@@ -13,9 +13,7 @@ import { AppContextProvider, useAppContext } from './context/context';
 
 function Content()
 {
-
   const { session } = useAppContext();
-
   return session ? (
     <Router>
       <Routes>
@@ -27,7 +25,6 @@ function Content()
         <Route path="/booking" element={<BookingPage />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/about" element={<AboutUs />} />
-
         <Route path='*' element={<NoPage />} />
       </Routes>
     </Router>
@@ -43,10 +40,7 @@ function Content()
     </Router>
   );
 }
-
 function App() {
-
-
   return (
     <Fragment>
       <AppContextProvider>
@@ -55,5 +49,4 @@ function App() {
     </Fragment>
   );
 }
-
 export default App;

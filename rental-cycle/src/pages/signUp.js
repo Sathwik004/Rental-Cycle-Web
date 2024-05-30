@@ -10,8 +10,9 @@ import { useNavigate } from 'react-router';
 function SignUp() {
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-
     const [name, setName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [dob, setdob] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
@@ -27,7 +28,7 @@ function SignUp() {
     const handleSignUp = async (event) => {
         console.log('event ', event);
         event.preventDefault();
-        if (name === '' || email === '' || password === '') {
+        if (name === '' || email === '' || password === '' || phone === '' || dob === '') {
             alert('Please fill all the fields');
             return;
         }
@@ -50,7 +51,7 @@ function SignUp() {
             }
             const { user: { id } } = data;
             console.log('user in login', id);
-            const { data: msg, error: err } = await supabase.from('Profiles').insert([{ userid: id, name: name, balance: 2000 }]);
+            const { data: msg, error: err } = await supabase.from('Profiles').insert([{ userid: id, name: name, balance: 2000, phone: phone, dob: dob}]);
             navigate('/home');
             if (err) {
                 console.log('error', err.message);
@@ -81,6 +82,8 @@ function SignUp() {
                 <label className={styles.title}>Sign Up</label>
                 <input type='text' placeholder='Name' className={styles.info} onChange={(e) => setName(e.target.value)} required></input>
                 <input type='text' placeholder='Email' className={styles.info} value={email} onChange={(e) => setEmail(e.target.value)} required></input>
+                <input type='tel' placeholder='Phone Number' className={styles.info} onChange={(e) => setPhone(e.target.value)} required></input>
+                <input type='text' placeholder='Date of Birth (dd-mm-yyyy)' className={styles.info} onChange={(e) => setdob(e.target.value)} required></input>
                 <input type='password' placeholder='Password' className={styles.info} value={password} onChange={(e) => setPassword(e.target.value)} required></input>
                 <input type='password' placeholder='Confirm Password' className={styles.info} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} required></input>
                 <button type='submit' className={styles.button1} disabled={loading}>{loading ? 'Loading...' : 'Sign Up'}</button>
